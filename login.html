@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Professional Enterprise Gateway</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        body {
+            background-color: #0b1a15;
+            /* Premium Corporate Dark Green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        /* Unified Authentication Card Box Viewport Wrapper Frame */
+        
+        .auth-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 440px;
+            border-radius: 16px;
+            padding: 40px 32px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .auth-header {
+            text-align: center;
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        /* Responsive branding image integration layout */
+        
+        .brand-logo-img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 4px;
+        }
+        
+        .auth-header p {
+            color: #666666;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        /* Form Controls Spacing Layers Structural Matrix Design */
+        
+        .form-group {
+            margin-bottom: 18px;
+            position: relative;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #0b1a15;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        /* Fixed Input Icon Inside Box Positioning Controls */
+        
+        .form-group i.input-icon {
+            position: absolute;
+            left: 16px;
+            top: 40px;
+            color: #668078;
+            font-size: 15px;
+            z-index: 5;
+        }
+        /* Password Eye Toggle Specific Placement Coordinates */
+        
+        .form-group .toggle-password {
+            position: absolute;
+            right: 16px;
+            top: 38px;
+            color: #668078;
+            font-size: 15px;
+            cursor: pointer;
+            z-index: 10;
+            padding: 4px;
+            transition: color 0.2s ease;
+        }
+        
+        .form-group .toggle-password:hover {
+            color: #ff007f;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 40px 12px 45px;
+            border: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #333333;
+            outline: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #ff007f;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(255, 0, 127, 0.1);
+        }
+        /* 🚨 INLINE FIELD LEVEL VALIDATION STYLING BLOCKS 🚨 */
+        
+        .field-error {
+            color: #dc2626;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 5px;
+            display: none;
+            /* Auto hidden state values placeholder standard */
+        }
+        /* Option box alignment flex configurations layout */
+        
+        .form-helper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            margin: 22px 0;
+            font-weight: 600;
+            color: #444444;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .form-helper label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .form-helper a {
+            color: #ff007f;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+        
+        .form-helper a:hover {
+            color: #d6006b;
+            text-decoration: underline;
+        }
+        /* Core Call Action Interface Form Trigger Buttons */
+        
+        .auth-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #ff007f;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 12px rgba(255, 0, 127, 0.25);
+        }
+        
+        .auth-btn:hover {
+            background-color: #d6006b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(255, 0, 127, 0.4);
+        }
+        /* Corporate Social Logins Columns Layout Grid */
+        
+        .social-login {
+            text-align: center;
+            margin-top: 25px;
+        }
+        
+        .social-login p {
+            font-size: 11px;
+            color: #666666;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+        }
+        
+        .social-icons a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+        }
+        
+        .social-icons a:hover {
+            border-color: #ff007f;
+            color: #ff007f;
+            background-color: #fff0f6;
+            transform: translateY(-2px);
+        }
+        
+        .switch-auth {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #444444;
+            font-weight: 600;
+        }
+        
+        .switch-auth a {
+            color: #ff007f;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        
+        .switch-auth a:hover {
+            text-decoration: underline;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        /* Mobile View Overrides */
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .auth-container {
+                padding: 30px 20px;
+                border-radius: 12px;
+            }
+            .form-helper {
+                font-size: 12px;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+            .auth-btn {
+                padding: 12px;
+                font-size: 15px;
+            }
+            .social-icons a {
+                width: 38px;
+                height: 38px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div id="loginPanel">
+            <div class="auth-header">
+                <img src="./asset/logo_rose-.webp" alt="Stackly Logo" class="brand-logo-img">
+                <p>Access your professional ledger workspace panel</p>
+            </div>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input type="text" id="loginEmail" placeholder="Enter your email address" required>
+                    <div class="field-error" id="loginEmailError">Invalid email format! (e.g., name@gmail.com)</div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    <i class="fas fa-eye toggle-password" onclick="togglePasswordField('loginPassword', this)"></i>
+                </div>
+                <div class="form-group">
+                    <label>Select Workspace Role</label>
+                    <i class="fas fa-user-tag input-icon"></i>
+                    <select id="loginRole" required>
+                        <option value="Finance Manager">Finance Manager</option>
+                        <option value="Accountant">Accountant</option>
+                    </select>
+                </div>
+                <div class="form-helper">
+                    <label>
+                        <input type="checkbox" id="rememberMe"> Remember Me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="auth-btn">Sign In to Dashboard</button>
+            </form>
+            <div class="social-login">
+                <p>Or Corporate Login With</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <p class="switch-auth">New to portal? <a id="toSignUp">Create Account</a></p>
+        </div>
+
+        <div id="signUpPanel" class="hidden">
+            <div class="auth-header">
+                <img src="./asset/logo_rose-.webp" alt="Stackly Logo" class="brand-logo-img">
+                <p>Register your financial enterprise credentials</p>
+            </div>
+            <form id="signUpForm" novalidate>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="regName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input type="text" id="regEmail" placeholder="Enter your email address" required>
+                    <div class="field-error" id="regEmailError">Invalid email format! (e.g., name@gmail.com)</div>
+                </div>
+                <div class="form-group">
+                    <label>Workspace Role Assignment</label>
+                    <i class="fas fa-user-tag input-icon"></i>
+                    <select id="regRole" required>
+                        <option value="Finance Manager">Finance Manager</option>
+                        <option value="Accountant">Accountant</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" id="regPassword" placeholder="Create your password" required>
+                    <i class="fas fa-eye toggle-password" onclick="togglePasswordField('regPassword', this)"></i>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" id="regConfirmPassword" placeholder="Confirm your password" required>
+                    <i class="fas fa-eye toggle-password" onclick="togglePasswordField('regConfirmPassword', this)"></i>
+                    <div class="field-error" id="regConfirmPasswordError">Passwords do not match!</div>
+                </div>
+                <button type="submit" class="auth-btn">Create Free Account</button>
+            </form>
+            <p class="switch-auth">Already registered? <a id="toLogin">Sign In instead</a></p>
+        </div>
+
+    </div>
+
+    <script>
+        const loginPanel = document.getElementById('loginPanel');
+        const signUpPanel = document.getElementById('signUpPanel');
+        const toSignUpBtn = document.getElementById('toSignUp');
+        const toLoginBtn = document.getElementById('toLogin');
+
+        // Toggle Views Controllers
+        if (toSignUpBtn && toLoginBtn) {
+            toSignUpBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginPanel.classList.add('hidden');
+                signUpPanel.classList.remove('hidden');
+                clearInlineValidationErrors();
+            });
+            toLoginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                signUpPanel.classList.add('hidden');
+                loginPanel.classList.remove('hidden');
+                clearInlineValidationErrors();
+            });
+        }
+
+        function clearInlineValidationErrors() {
+            document.querySelectorAll('.field-error').forEach(err => err.style.display = 'none');
+        }
+
+        // Password fields visibility helper toggles
+        function togglePasswordField(fieldId, iconElement) {
+            const passwordInputField = document.getElementById(fieldId);
+            if (passwordInputField) {
+                if (passwordInputField.type === "password") {
+                    passwordInputField.type = "text";
+                    iconElement.classList.remove("fa-eye");
+                    iconElement.classList.add("fa-eye-slash");
+                } else {
+                    passwordInputField.type = "password";
+                    iconElement.classList.remove("fa-eye-slash");
+                    iconElement.classList.add("fa-eye");
+                }
+            }
+        }
+
+        // Regex helper function validating strict structural email profiles format
+        function isValidEmailFormat(emailStr) {
+            const emailRegexPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegexPattern.test(emailStr);
+        }
+
+        // ================= 🚨 ACCOUNT REGISTRATION PROCESSING WITH INLINE LINES 🚨 =================
+        document.getElementById('signUpForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('regName').value.trim();
+            const email = document.getElementById('regEmail').value.trim().toLowerCase();
+            const role = document.getElementById('regRole').value;
+            const pass = document.getElementById('regPassword').value;
+            const confirmPass = document.getElementById('regConfirmPassword').value;
+
+            let isFormValid = true;
+
+            // 1. Email format verification matching
+            const emailErrDiv = document.getElementById('regEmailError');
+            if (!isValidEmailFormat(email)) {
+                emailErrDiv.style.display = 'block';
+                isFormValid = false;
+            } else {
+                emailErrDiv.style.display = 'none';
+            }
+
+            // 2. Confirm password matching strings comparison constraints
+            const confirmPassErrDiv = document.getElementById('regConfirmPasswordError');
+            if (pass !== confirmPass) {
+                confirmPassErrDiv.style.display = 'block';
+                isFormValid = false;
+            } else {
+                confirmPassErrDiv.style.display = 'none';
+            }
+
+            // If layout variables checklist hits failure states, freeze form processing silently
+            if (!isFormValid) return;
+
+            // Commit user account data dictionary map to browser cache memory elements
+            const absoluteSavedAccountObj = {
+                name,
+                email,
+                role,
+                password: pass
+            };
+            localStorage.setItem(email, JSON.stringify(absoluteSavedAccountObj));
+
+            // NO INTERRUPTIONS ALERT WINDOWS -> SMOOTH SLIDE TRANSITION DIRECT TO LOGIN
+            signUpPanel.classList.add('hidden');
+            loginPanel.classList.remove('hidden');
+
+            // Auto routing values indicators mapping forward onto fields elements
+            document.getElementById('loginEmail').value = email;
+            document.getElementById('loginRole').value = role;
+            document.getElementById('signUpForm').reset();
+        });
+
+        // ================= 🚨 UNIVERSAL WILDCARD BYPASS LOGIN DISPATCHER 🚨 =================
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const emailInputVal = document.getElementById('loginEmail').value.trim();
+            const passInputVal = document.getElementById('loginPassword').value;
+            const roleSelection = document.getElementById('loginRole').value;
+
+            let isLoginValid = true;
+
+            // Simple login syntax structural validation check loop overrides browser flags
+            const loginEmailErrDiv = document.getElementById('loginEmailError');
+            if (emailInputVal === "" || !isValidEmailFormat(emailInputVal.includes('@') ? emailInputVal : `${emailInputVal}@gmail.com`)) {
+                loginEmailErrDiv.style.display = 'block';
+                isLoginValid = false;
+            } else {
+                loginEmailErrDiv.style.display = 'none';
+            }
+
+            if (!isLoginValid) return;
+
+            // Extract username alias dynamically from input to render beautifully on header nodes
+            let extractedUserDisplayHandle = emailInputVal.split('@')[0];
+            if (!extractedUserDisplayHandle || extractedUserDisplayHandle === "") {
+                extractedUserDisplayHandle = (roleSelection === 'Finance Manager') ? "Finance Manager" : "Account Officer";
+            }
+
+            // Sets global session data token smoothly using the wildcard keys input references 
+            const sessionMockProfileToken = {
+                name: extractedUserDisplayHandle,
+                email: emailInputVal.includes('@') ? emailInputVal : `${emailInputVal}@stackly.com`,
+                role: roleSelection
+            };
+            sessionStorage.setItem('activeSessionUser', JSON.stringify(sessionMockProfileToken));
+
+            // Absolute wildcard redirection route parameters matrix execution based on dropdown roles selection
+            if (roleSelection === 'Finance Manager') {
+                window.location.href = 'dashboard1.html';
+            } else if (roleSelection === 'Accountant') {
+                window.location.href = 'dashboard2.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

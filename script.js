@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize AOS Animation Library
     AOS.init({
-        once: true,
+        once: true, 
         mirror: false
     });
 
@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenuBtn && navLinks) {
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-
+            
             const icon = mobileMenuBtn.querySelector('i');
-            if (navLinks.classList.contains('active')) {
+            if(navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
             } else {
@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Step C: Start smooth execution runtime engine loop
         function autoScrollEngine() {
             scrollAmount -= speed;
-
+            
             // If track crosses the cloned elements boundary center reset point
             if (Math.abs(scrollAmount) >= track.scrollWidth / 2) {
                 scrollAmount = 0; // Seamless position reset teleportation
             }
-
+            
             track.style.transform = `translateX(${scrollAmount}px)`;
             requestAnimationFrame(autoScrollEngine); // Smooth hardware accelerated loops
         }
@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 tabPanes.forEach(pane => pane.classList.remove('active'));
 
                 button.classList.add('active');
-
+                
                 const targetId = button.getAttribute('data-target');
                 const targetPane = document.getElementById(targetId);
-
+                
                 if (targetPane) {
                     targetPane.classList.add('active');
                 }
@@ -91,33 +91,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ================= 6. FAQ ACCORDION SLIDE TOGGLE LOGIC =================
-const faqHeaders = document.querySelectorAll('.faq-header');
+    const faqHeaders = document.querySelectorAll('.faq-header');
 
-if (faqHeaders.length > 0) {
-    faqHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const currentFaqCard = header.parentElement;
-            const currentAnswerDrawer = currentFaqCard.querySelector('.faq-ans');
-            const isOpen = currentFaqCard.classList.contains('active');
+    if (faqHeaders.length > 0) {
+        faqHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const currentFaqCard = header.parentElement;
+                const currentAnswerDrawer = currentFaqCard.querySelector('.faq-ans');
+                const isOpen = currentFaqCard.classList.contains('active');
 
-            // Step A: Close all other open FAQ cards first (Optional clean slider action)
-            document.querySelectorAll('.faq-content').forEach(card => {
-                card.classList.remove('active');
-                card.querySelector('.faq-ans').style.maxHeight = null;
-                card.querySelector('.faq-ans').style.paddingTop = "0";
+                // Step A: Close all other open FAQ cards first (Optional clean slider action)
+                document.querySelectorAll('.faq-content').forEach(card => {
+                    card.classList.remove('active');
+                    card.querySelector('.faq-ans').style.maxHeight = null;
+                    card.querySelector('.faq-ans').style.paddingTop = "0";
+                });
+
+                // Step B: Toggle state controls for the clicked block card elements
+                if (!isOpen) {
+                    currentFaqCard.classList.add('active');
+                    // Dynamic calculation of inner scroll heights avoids static pixels hardcoding bugs
+                    currentAnswerDrawer.style.maxHeight = currentAnswerDrawer.scrollHeight + "px";
+                    currentAnswerDrawer.style.paddingTop = "5px";
+                } else {
+                    currentFaqCard.classList.remove('active');
+                    currentAnswerDrawer.style.maxHeight = null;
+                    currentAnswerDrawer.style.paddingTop = "0";
+                }
             });
-
-            // Step B: Toggle state controls for the clicked block card elements
-            if (!isOpen) {
-                currentFaqCard.classList.add('active');
-                // Dynamic calculation of inner scroll heights avoids static pixels hardcoding bugs
-                currentAnswerDrawer.style.maxHeight = currentAnswerDrawer.scrollHeight + "px";
-                currentAnswerDrawer.style.paddingTop = "5px";
-            } else {
-                currentFaqCard.classList.remove('active');
-                currentAnswerDrawer.style.maxHeight = null;
-                currentAnswerDrawer.style.paddingTop = "0";
-            }
         });
-    });
-}
+    }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinTrust - Finance & Accounting</title>
+    <title>Stackly - Finance & Accounting</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
@@ -13,9 +13,9 @@
 <body>
 
     <header class="navbar">
-        <div class="logo">
-            <h2>FinTrust</h2>
-        </div>
+        <a href="index.html" class="sidebar-brand">
+            <img src="./asset/logo_rose-.webp" alt="Stackly Logo" class="brand-logo-img">
+        </a>
 
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
@@ -23,30 +23,32 @@
 
         <nav class="nav-center" id="nav-links">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#service">Service</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="mobile-login"><button class="login-btn">Login</button></li>
+
+                <li class="mobile-login">
+                    <a href="login.html" class="login-btn">Login</a>
+                </li>
             </ul>
         </nav>
 
         <div class="nav-right desktop-login">
-            <button class="login-btn">Login</button>
+            <a href="login.html" class="login-btn">Login</a>
         </div>
     </header>
 
     <section class="hero-section" id="home">
         <div class="hero-image" data-aos="fade-right" data-aos-duration="1000">
-            <img src="./asset/hero1.webp" alt="Finance and Accounting Experts">
+            <img src="./asset/herosec1.webp" alt="Finance and Accounting Experts">
         </div>
 
         <div class="hero-content" data-aos="fade-left" data-aos-duration="1000">
             <div class="hero-text-wrapper">
                 <div class="eyebrow">
-                    <span class="line"></span>
-                    EXPERT FINANCE & ACCOUNTING
+                    <span class="line"></span> EXPERT FINANCE & ACCOUNTING
                 </div>
 
                 <h1 class="headline">
@@ -54,8 +56,7 @@
                 </h1>
 
                 <p class="subheadline">
-                    Delivering bespoke financial planning, corporate tax structuring, and dedicated accounting services
-                    to ensure your business thrives with clarity.
+                    Delivering bespoke financial planning, corporate tax structuring, and dedicated accounting services to ensure your business thrives with clarity.
                 </p>
 
                 <a href="#contact" class="btn-primary">GET A FREE CONSULTATION ↗</a>
@@ -65,8 +66,6 @@
                     <span><i class="fas fa-check"></i> Tax Optimization</span>
                     <span><i class="fas fa-check"></i> 100% Confidential</span>
                 </div>
-
-                <div class="watermark">F</div>
             </div>
         </div>
     </section>
@@ -86,85 +85,78 @@
 
                 <div class="service-card">
                     <div class="card-image">
-                        <img src="./asset/hero1.webp" alt="Corporate Accounting" loading="lazy">
+                        <img src="./asset/OIP.webp" alt="Corporate Accounting" loading="lazy">
                     </div>
                     <div class="card-body">
                         <div class="card-category">ACCOUNTING</div>
                         <h3 class="card-title">Corporate Accounting</h3>
-                        <p class="card-desc">Comprehensive bookkeeping and financial reporting ensuring complete
-                            accuracy and compliance.</p>
+                        <p class="card-desc">Comprehensive bookkeeping and financial reporting ensuring complete accuracy and compliance.</p>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="card-image">
-                        <img src="./pexels-artempodrez-5716027.webp" alt="Tax Advisory" loading="lazy">
+                        <img src="./asset/tax.webp" alt="Tax Advisory" loading="lazy">
                     </div>
                     <div class="card-body">
                         <div class="card-category">TAXATION</div>
                         <h3 class="card-title">Tax Advisory</h3>
-                        <p class="card-desc">Strategic tax planning and preparation to minimize liabilities and maximize
-                            your returns.</p>
+                        <p class="card-desc">Strategic tax planning and preparation to minimize liabilities and maximize your returns.</p>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="card-image">
-                        <img src="./pexels-cottonbro-5077047.webp" alt="Financial Auditing" loading="lazy">
+                        <img src="./asset/audit.webp" alt="Financial Auditing" loading="lazy">
                     </div>
                     <div class="card-body">
                         <div class="card-category">COMPLIANCE</div>
                         <h3 class="card-title">Financial Auditing</h3>
-                        <p class="card-desc">Thorough independent audits to provide transparency and build trust with
-                            your stakeholders.</p>
+                        <p class="card-desc">Thorough independent audits to provide transparency and build trust with your stakeholders.</p>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="card-image">
-                        <img src="./pexels-shkrabaanthony-5466244.webp" alt="Asset Management" loading="lazy">
+                        <img src="./asset/asses.webp" alt="Asset Management" loading="lazy">
                     </div>
                     <div class="card-body">
                         <div class="card-category">WEALTH</div>
                         <h3 class="card-title">Asset Management</h3>
-                        <p class="card-desc">Advanced asset allocation to preserve and systematically grow your
-                            corporate and personal wealth.</p>
+                        <p class="card-desc">Advanced asset allocation to preserve and systematically grow your corporate and personal wealth.</p>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="card-image">
-                        <img src="./pexels-tima-miroshnichenko-6694492.webp" alt="Business Consulting" loading="lazy">
+                        <img src="./asset/business.webp" alt="Business Consulting" loading="lazy">
                     </div>
                     <div class="card-body">
                         <div class="card-category">ADVISORY</div>
                         <h3 class="card-title">Business Consulting</h3>
-                        <p class="card-desc">Financial modeling and strategic consulting to guide your business through
-                            complex expansions.</p>
+                        <p class="card-desc">Financial modeling and strategic consulting to guide your business through complex expansions.</p>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="card-image">
-                        <img src="./pexels-kampus-6248973.webp" alt="Risk Management" loading="lazy">
+                        <img src="./asset/risk.webp" alt="Risk Management" loading="lazy">
                     </div>
                     <div class="card-body">
                         <div class="card-category">RISK</div>
                         <h3 class="card-title">Risk Management</h3>
-                        <p class="card-desc">Identifying, assessing, and mitigating financial risks to secure your
-                            business's long-term future.</p>
+                        <p class="card-desc">Identifying, assessing, and mitigating financial risks to secure your business's long-term future.</p>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="card-image">
-                        <img src="./pexels-artempodrez-5716027.webp" alt="Payroll Services" loading="lazy">
+                        <img src="./asset/payrol.webp" alt="Payroll Services" loading="lazy">
                     </div>
                     <div class="card-body">
                         <div class="card-category">PAYROLL</div>
                         <h3 class="card-title">Payroll Services</h3>
-                        <p class="card-desc">Streamlined payroll processing ensuring accurate, timely payments and tax
-                            compliance.</p>
+                        <p class="card-desc">Streamlined payroll processing ensuring accurate, timely payments and tax compliance.</p>
                     </div>
                 </div>
 
@@ -182,7 +174,7 @@
                     <span class="exp-text">YEARS OF<br>TRUST</span>
                 </div>
                 <div class="about-image">
-                    <img src="./asset/hero1.webp" alt="Accounting Experts Team Discussion" loading="lazy">
+                    <img src="./asset/aboutsec1.webp" alt="Accounting Experts Team Discussion" loading="lazy">
                 </div>
             </div>
 
@@ -200,9 +192,7 @@
 
                 <div class="tab-content-container">
                     <div class="tab-pane active" id="tab-bookkeeping">
-                        <p class="tab-desc">We manage your daily ledgers and balance sheets with mathematical precision,
-                            transforming raw enterprise transactions into structural financial intelligence dashboards.
-                        </p>
+                        <p class="tab-desc">We manage your daily ledgers and balance sheets with mathematical precision, transforming raw enterprise transactions into structural financial intelligence dashboards.</p>
                         <ul class="feature-list">
                             <li><i class="fas fa-check"></i> Automated Real-Time Ledgers</li>
                             <li><i class="fas fa-check"></i> Cash Flow Statement Optimization</li>
@@ -212,8 +202,7 @@
                     </div>
 
                     <div class="tab-pane" id="tab-taxation">
-                        <p class="tab-desc">Our corporate tax experts build proactive legal structures that mitigate
-                            liability risks while optimizing end-of-year returns inside local tax frameworks.</p>
+                        <p class="tab-desc">Our corporate tax experts build proactive legal structures that mitigate liability risks while optimizing end-of-year returns inside local tax frameworks.</p>
                         <ul class="feature-list">
                             <li><i class="fas fa-check"></i> Advanced Corporate Tax Structuring</li>
                             <li><i class="fas fa-check"></i> Local and Global Write-Off Planning</li>
@@ -223,8 +212,7 @@
                     </div>
 
                     <div class="tab-pane" id="tab-audit">
-                        <p class="tab-desc">Independent internal audits that secure transparent operations. We review,
-                            benchmark, and certify numbers to guarantee bulletproof regulatory protection.</p>
+                        <p class="tab-desc">Independent internal audits that secure transparent operations. We review, benchmark, and certify numbers to guarantee bulletproof regulatory protection.</p>
                         <ul class="feature-list">
                             <li><i class="fas fa-check"></i> Statutory Audit Preparedness</li>
                             <li><i class="fas fa-check"></i> Internal Compliance Controls</li>
@@ -241,10 +229,8 @@
     <section class="marquee-section">
         <div class="marquee-carousel">
             <div class="marquee-content" id="finance-marquee">
-                <span class="marquee-text">FINANCIAL ACCURACY &nbsp;•&nbsp; STRATEGIC TAX PLANNING &nbsp;•&nbsp; AUDIT
-                    COMPLIANCE &nbsp;•&nbsp; CORPORATE LEDGERS &nbsp;•&nbsp; CASH FLOW OPTIMIZATION &nbsp;•&nbsp;</span>
-                <span class="marquee-text">FINANCIAL ACCURACY &nbsp;•&nbsp; STRATEGIC TAX PLANNING &nbsp;•&nbsp; AUDIT
-                    COMPLIANCE &nbsp;•&nbsp; CORPORATE LEDGERS &nbsp;•&nbsp; CASH FLOW OPTIMIZATION &nbsp;•&nbsp;</span>
+                <span class="marquee-text">FINANCIAL ACCURACY &nbsp;•&nbsp; STRATEGIC TAX PLANNING &nbsp;•&nbsp; AUDIT COMPLIANCE &nbsp;•&nbsp; CORPORATE LEDGERS &nbsp;•&nbsp; CASH FLOW OPTIMIZATION &nbsp;•&nbsp;</span>
+                <span class="marquee-text">FINANCIAL ACCURACY &nbsp;•&nbsp; STRATEGIC TAX PLANNING &nbsp;•&nbsp; AUDIT COMPLIANCE &nbsp;•&nbsp; CORPORATE LEDGERS &nbsp;•&nbsp; CASH FLOW OPTIMIZATION &nbsp;•&nbsp;</span>
             </div>
         </div>
     </section>
@@ -261,7 +247,7 @@
 
                 <div class="team-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                     <div class="member-image-wrapper">
-                        <img src="./asset/hero1.webp" alt="CA Rajesh Kumar - Senior Accountant" loading="lazy">
+                        <img src="./asset/aboutsec2.webp" alt="CA Rajesh Kumar - Senior Accountant" loading="lazy">
                         <div class="member-social-overlay">
                             <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
@@ -271,14 +257,13 @@
                         <div class="member-badge">CA</div>
                         <h3 class="member-name">CA Rajesh Kumar</h3>
                         <p class="member-role">Senior Accountant</p>
-                        <p class="member-bio">Specialist in corporate ledger auditing and cloud bookkeeping strategy
-                            controls.</p>
+                        <p class="member-bio">Specialist in corporate ledger auditing and cloud bookkeeping strategy controls.</p>
                     </div>
                 </div>
 
                 <div class="team-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                     <div class="member-image-wrapper">
-                        <img src="./asset/hero1.webp" alt="Priya Sharma - Tax Consultant" loading="lazy">
+                        <img src="./asset/Priya.webp" alt="Priya Sharma - Tax Consultant" loading="lazy">
                         <div class="member-social-overlay">
                             <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
@@ -288,14 +273,13 @@
                         <div class="member-badge">TAX</div>
                         <h3 class="member-name">Priya Sharma</h3>
                         <p class="member-role">Tax Consultant</p>
-                        <p class="member-bio">Expert in advanced local corporate tax structuring and fiscal liabilities
-                            minimization.</p>
+                        <p class="member-bio">Expert in advanced local corporate tax structuring and fiscal liabilities minimization.</p>
                     </div>
                 </div>
 
                 <div class="team-card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                     <div class="member-image-wrapper">
-                        <img src="./asset/hero1.webp" alt="Arun Kumar - Financial Advisor" loading="lazy">
+                        <img src="./asset/arun.webp" alt="Arun Kumar - Financial Advisor" loading="lazy">
                         <div class="member-social-overlay">
                             <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
@@ -305,8 +289,7 @@
                         <div class="member-badge">WEALTH</div>
                         <h3 class="member-name">Arun Kumar</h3>
                         <p class="member-role">Financial Advisor</p>
-                        <p class="member-bio">Crafting bulletproof capital allocation matrices and long-term risk asset
-                            protection.</p>
+                        <p class="member-bio">Crafting bulletproof capital allocation matrices and long-term risk asset protection.</p>
                     </div>
                 </div>
 
@@ -335,13 +318,11 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <p class="client-feedback">
-                        "Excellent tax planning and accounting services. Their team restructured our entire ledger
-                        bookkeeping, saving us massive overhead leakages this fiscal year."
+                        "Excellent tax planning and accounting services. Their team restructured our entire ledger bookkeeping, saving us massive overhead leakages this fiscal year."
                     </p>
                     <div class="client-profile">
                         <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150"
-                                alt="Ramesh" loading="lazy">
+                            <img src="./asset/a1.webp" alt="Ramesh" loading="lazy">
                         </div>
                         <div class="client-meta">
                             <h4 class="client-name">Ramesh</h4>
@@ -360,13 +341,11 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <p class="client-feedback">
-                        "Switching to their cloud accounting system was the best decision for our retail enterprise.
-                        Auditing processes have never been this seamless and fast."
+                        "Switching to their cloud accounting system was the best decision for our retail enterprise. Auditing processes have never been this seamless and fast."
                     </p>
                     <div class="client-profile">
                         <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150"
-                                alt="Suresh Kumar" loading="lazy">
+                            <img src="./asset/a2.webp" alt="Suresh Kumar" loading="lazy">
                         </div>
                         <div class="client-meta">
                             <h4 class="client-name">Suresh Kumar</h4>
@@ -385,13 +364,11 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <p class="client-feedback">
-                        "Highly professional financial advisors. Their asset allocation matrices provided us rock-solid
-                        security and steady long-term corporate growth expansion."
+                        "Highly professional financial advisors. Their asset allocation matrices provided us rock-solid security and steady long-term corporate growth expansion."
                     </p>
                     <div class="client-profile">
                         <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150"
-                                alt="Meera Krishnan" loading="lazy">
+                            <img src="./asset/a3.webp" alt="Meera Krishnan" loading="lazy">
                         </div>
                         <div class="client-meta">
                             <h4 class="client-name">Meera Krishnan</h4>
@@ -422,9 +399,7 @@
                             <div class="faq-symbol"><i class="fas fa-plus"></i></div>
                         </div>
                         <div class="faq-ans">
-                            <p>By shifting to continuous matching ledgers, raw transaction receipts are automatically
-                                sorted and balanced instantly. This ensures audit data is always ready, reducing
-                                processing timelines by up to 40%.</p>
+                            <p>By shifting to continuous matching ledgers, raw transaction receipts are automatically sorted and balanced instantly. This ensures audit data is always ready, reducing processing timelines by up to 40%.</p>
                         </div>
                     </div>
 
@@ -434,9 +409,7 @@
                             <div class="faq-symbol"><i class="fas fa-plus"></i></div>
                         </div>
                         <div class="faq-ans">
-                            <p>Most corporate enterprises see significant tax liability relief—averaging 15-22%
-                                reductions in operational overhead leakages—within the first two fiscal quarters after
-                                setup.</p>
+                            <p>Most corporate enterprises see significant tax liability relief—averaging 15-22% reductions in operational overhead leakages—within the first two fiscal quarters after setup.</p>
                         </div>
                     </div>
 
@@ -446,8 +419,7 @@
                             <div class="faq-symbol"><i class="fas fa-plus"></i></div>
                         </div>
                         <div class="faq-ans">
-                            <p>Absolutely. Our bookkeeping frameworks use an "API-first" layout, allowing seamless
-                                ledger sync with major ERP platforms like SAP, Oracle, and Microsoft Dynamics 365.</p>
+                            <p>Absolutely. Our bookkeeping frameworks use an "API-first" layout, allowing seamless ledger sync with major ERP platforms like SAP, Oracle, and Microsoft Dynamics 365.</p>
                         </div>
                     </div>
 
@@ -457,9 +429,7 @@
                             <div class="faq-symbol"><i class="fas fa-plus"></i></div>
                         </div>
                         <div class="faq-ans">
-                            <p>Our dedicated accounting advisors review all reporting procedures to guarantee adherence
-                                to sovereign tax laws, data encryption protocols, and global security benchmarks like
-                                SOC2 Type II.</p>
+                            <p>Our dedicated accounting advisors review all reporting procedures to guarantee adherence to sovereign tax laws, data encryption protocols, and global security benchmarks like SOC2 Type II.</p>
                         </div>
                     </div>
 
@@ -508,8 +478,7 @@
                     <span class="text-gradient">Corporate Finances?</span>
                 </h2>
                 <p class="cta-subtitle">
-                    Partner with our certified experts to streamline bookkeeping, mitigate tax liabilities, and drive
-                    enterprise value with real-time intelligence.
+                    Partner with our certified experts to streamline bookkeeping, mitigate tax liabilities, and drive enterprise value with real-time intelligence.
                 </p>
             </div>
 
@@ -525,12 +494,11 @@
         <div class="footer-container">
 
             <div class="footer-section brand-col" data-aos="fade-down" data-aos-delay="100">
-                <div class="footer-logo">
-                    <h2>FinTrust</h2>
-                </div>
+                <a href="index.html" class="footer-logo">
+                    <img src="./asset/logo_rose-.webp" alt="Stackly Logo" class="brand-logo-img">
+                </a>
                 <p class="footer-desc">
-                    Empowering enterprise value and securing financial precision with bespoke accounting, strategic tax
-                    planning, and bulletproof audit compliance solutions.
+                    Empowering enterprise value and securing financial precision with bespoke accounting, strategic tax planning, and bulletproof audit compliance solutions.
                 </p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-instagram"></i></a>
