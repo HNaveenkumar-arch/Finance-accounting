@@ -14,7 +14,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
-        
+
         body {
             background-color: #f4f6f8;
             display: flex;
@@ -22,8 +22,7 @@
             overflow-x: hidden;
             width: 100vw;
         }
-        /* ================= SIDEBAR DESIGN LAYOUT ================= */
-        
+
         .sidebar {
             width: 280px;
             background-color: #0b1a15;
@@ -37,9 +36,8 @@
             top: 0;
             left: 0;
             overflow-y: auto;
-            /* Enable scroll if menu is too long */
         }
-        
+
         .sidebar-brand {
             padding: 20px 25px;
             display: flex;
@@ -47,18 +45,18 @@
             justify-content: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .sidebar-brand img {
             width: 100%;
             max-width: 160px;
             height: auto;
             object-fit: contain;
         }
-        
+
         .sidebar-section-container {
             padding: 20px 0 10px 0;
         }
-        
+
         .section-title {
             font-size: 11px;
             font-weight: 700;
@@ -67,11 +65,11 @@
             text-transform: uppercase;
             padding: 0 25px 12px 25px;
         }
-        
+
         .sidebar-menu {
             list-style: none;
         }
-        
+
         .sidebar-menu li a {
             display: flex;
             align-items: center;
@@ -84,15 +82,14 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .sidebar-menu li a:hover,
         .sidebar-menu li.active a {
             color: #ffffff;
             background-color: rgba(255, 0, 127, 0.1);
             border-left: 4px solid #ff007f;
         }
-        /* ================= MAIN CONTENT FRAMEWORK ================= */
-        
+
         .main-content {
             margin-left: 280px;
             width: calc(100% - 280px);
@@ -102,7 +99,7 @@
             flex-direction: column;
             position: relative;
         }
-        
+
         .dashboard-header {
             background: #ffffff;
             padding: 20px 40px;
@@ -115,25 +112,25 @@
             top: 0;
             z-index: 100;
         }
-        
+
         .header-left {
             display: flex;
             align-items: center;
             gap: 20px;
         }
-        
+
         .header-left h1 {
             font-size: 22px;
             color: #0b1a15;
             font-weight: 800;
         }
-        
+
         .header-profile-box {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        
+
         .prof-avatar {
             width: 42px;
             height: 42px;
@@ -147,23 +144,23 @@
             font-weight: 700;
             flex-shrink: 0;
         }
-        
+
         .prof-details {
             text-align: right;
         }
-        
+
         .prof-name {
             font-size: 15px;
             font-weight: 700;
             color: #1a1a1a;
         }
-        
+
         .prof-email {
             font-size: 12px;
             color: #666;
             font-weight: 600;
         }
-        
+
         .logout-btn {
             padding: 8px 16px;
             background: #ff007f;
@@ -176,39 +173,39 @@
             transition: all 0.3s ease;
             white-space: nowrap;
         }
-        
+
         .logout-btn:hover {
             background: #d6006b;
         }
-        
+
         .dashboard-body {
             padding: 40px;
             flex: 1;
             width: 100%;
             max-width: 100vw;
         }
-        
+
         .content-page {
             display: none;
         }
-        
+
         .content-page.active-view {
             display: block !important;
             animation: fadeIn 0.4s ease;
         }
-        
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        /* ================= CARDS & METRICS ================= */
-        
+
         .welcome-card {
             background: #0b1a15;
             color: white;
@@ -217,28 +214,28 @@
             margin-bottom: 30px;
             box-shadow: 0 10px 25px rgba(11, 26, 21, 0.08);
         }
-        
+
         .welcome-card h2 {
             font-size: 28px;
             font-weight: 800;
             margin-bottom: 10px;
             line-height: 1.2;
         }
-        
+
         .welcome-card p {
             color: #b3c5c0;
             font-size: 15px;
             max-width: 600px;
             line-height: 1.6;
         }
-        
+
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 25px;
             margin-bottom: 40px;
         }
-        
+
         .metric-card {
             background: white;
             padding: 25px;
@@ -249,7 +246,7 @@
             align-items: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
         }
-        
+
         .metric-meta h3 {
             font-size: 13px;
             color: #666;
@@ -258,13 +255,13 @@
             letter-spacing: 0.5px;
             margin-bottom: 8px;
         }
-        
+
         .metric-meta p {
             font-size: 24px;
             font-weight: 800;
             color: #0b1a15;
         }
-        
+
         .metric-icon {
             width: 50px;
             height: 50px;
@@ -277,15 +274,14 @@
             font-size: 20px;
             flex-shrink: 0;
         }
-        /* ================= CHARTS ================= */
-        
+
         .charts-container-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 25px;
             margin-bottom: 25px;
         }
-        
+
         .chart-wrapper-box {
             background: #ffffff;
             padding: 25px;
@@ -295,7 +291,7 @@
             width: 100%;
             overflow: hidden;
         }
-        
+
         .chart-wrapper-box h3 {
             font-size: 16px;
             color: #0b1a15;
@@ -306,25 +302,24 @@
             gap: 10px;
             flex-wrap: wrap;
         }
-        
+
         .chart-wrapper-box h3 i {
             color: #ff007f;
         }
-        
+
         .canvas-holder {
             position: relative;
             width: 100%;
             height: 300px;
         }
-        
+
         .bottom-charts-row {
             display: grid;
             grid-template-columns: 1fr;
             gap: 25px;
             margin-bottom: 25px;
         }
-        /* ================= TABLES ================= */
-        
+
         .table-container {
             background: #ffffff;
             padding: 25px;
@@ -336,12 +331,10 @@
             width: 100%;
             max-width: 100%;
             overflow-x: auto;
-            /* Allow horizontal scroll */
             -webkit-overflow-scrolling: touch;
-            /* Smooth iOS scroll */
             display: block;
         }
-        
+
         .table-title {
             font-size: 18px;
             font-weight: 800;
@@ -352,19 +345,18 @@
             gap: 10px;
             white-space: nowrap;
         }
-        
+
         .table-title i {
             color: #ff007f;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
             min-width: 700px;
-            /* Force minimum width to prevent squash */
         }
-        
+
         th {
             background-color: #f8fafc;
             padding: 14px 16px;
@@ -376,7 +368,7 @@
             border-bottom: 2px solid #e2e8f0;
             white-space: nowrap;
         }
-        
+
         td {
             padding: 16px;
             border-bottom: 1px solid #eef2f1;
@@ -385,11 +377,11 @@
             font-weight: 600;
             white-space: nowrap;
         }
-        
+
         tr:hover td {
             background-color: #f8fafc;
         }
-        
+
         .status-badge {
             padding: 5px 12px;
             border-radius: 20px;
@@ -398,37 +390,36 @@
             display: inline-block;
             text-align: center;
         }
-        
+
         .status-success {
             background-color: #e6fcf5;
             color: #0ca678;
         }
-        
+
         .status-warning {
             background-color: #fff9db;
             color: #f59f00;
         }
-        
+
         .status-danger {
             background-color: #fff5f5;
             color: #ff6b6b;
         }
-        /* ================= SETTINGS FORMS ================= */
-        
+
         .settings-grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 20px;
         }
-        
+
         .settings-card {
             background: white;
             padding: 25px;
             border-radius: 12px;
             border: 1px solid #eef2f1;
         }
-        
+
         .settings-card h4 {
             font-size: 15px;
             font-weight: 800;
@@ -439,7 +430,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         .form-block {
             display: flex;
             flex-direction: column;
@@ -447,13 +438,13 @@
             margin-bottom: 15px;
             width: 100%;
         }
-        
+
         .form-block label {
             font-size: 12px;
             font-weight: 700;
             color: #495057;
         }
-        
+
         .form-block input,
         .form-block select {
             padding: 12px 15px;
@@ -465,14 +456,14 @@
             outline: none;
             width: 100%;
         }
-        
+
         .form-block input:focus,
         .form-block select:focus {
             border-color: #ff007f;
             background-color: #ffffff;
             box-shadow: 0 0 0 4px rgba(255, 0, 127, 0.1);
         }
-        
+
         .save-settings-btn {
             padding: 12px 24px;
             background-color: #ff007f;
@@ -486,18 +477,17 @@
             box-shadow: 0 4px 12px rgba(255, 0, 127, 0.2);
             width: 100%;
         }
-        
+
         @media(min-width: 480px) {
             .save-settings-btn {
                 width: fit-content;
             }
         }
-        
+
         .save-settings-btn:hover {
             background-color: #d6006b;
         }
-        /* ================= OVERLAY & HAMBURGER ================= */
-        
+
         .sidebar-overlay {
             position: fixed;
             top: 0;
@@ -511,12 +501,12 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
+
         .sidebar-overlay.active {
             display: block;
             opacity: 1;
         }
-        
+
         .hamburger-menu {
             display: none;
             font-size: 24px;
@@ -524,116 +514,135 @@
             cursor: pointer;
             padding: 5px;
         }
-        /* ================= 🚨 EXPLICIT MOBILE MEDIA QUERIES 🚨 ================= */
-        
+
         @media (max-width: 1024px) {
             .charts-container-grid {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         @media (max-width: 900px) {
             .sidebar {
                 transform: translateX(-100%);
             }
-            /* Use transform instead of left for smoother animation */
+
             .sidebar.active {
                 transform: translateX(0);
                 box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2);
             }
+
             .main-content {
                 margin-left: 0;
                 width: 100%;
             }
+
             .hamburger-menu {
                 display: block;
             }
+
             .dashboard-header {
                 padding: 15px 25px;
             }
+
             .dashboard-body {
                 padding: 25px;
             }
+
             .header-left h1 {
                 font-size: 20px;
             }
         }
-        
+
         @media (max-width: 768px) {
             .settings-grid-layout {
                 grid-template-columns: 1fr;
             }
-            /* Force settings to 1 column */
+
             .metrics-grid {
                 grid-template-columns: 1fr;
             }
-            /* Force metrics to 1 column on tablets/phones */
         }
-        
+
         @media (max-width: 480px) {
             .dashboard-header {
                 padding: 15px 15px;
             }
+
             .header-left {
                 gap: 10px;
             }
+
             .header-left h1 {
                 font-size: 16px;
             }
+
             .prof-details {
                 display: none;
             }
-            /* Hide name/email to save space */
+
             .prof-avatar {
                 width: 36px;
                 height: 36px;
                 font-size: 14px;
             }
+
             .logout-btn {
                 padding: 6px 12px;
                 font-size: 12px;
             }
+
             .dashboard-body {
                 padding: 15px;
             }
+
             .welcome-card {
                 padding: 20px;
                 border-radius: 12px;
                 margin-bottom: 20px;
             }
+
             .welcome-card h2 {
                 font-size: 20px;
             }
+
             .welcome-card p {
                 font-size: 13px;
             }
+
             .metric-card {
                 padding: 20px;
                 border-radius: 10px;
             }
+
             .metric-meta p {
                 font-size: 20px;
             }
+
             .chart-wrapper-box {
                 padding: 15px;
                 border-radius: 12px;
                 margin-bottom: 15px;
             }
+
             .chart-wrapper-box h3 {
                 font-size: 14px;
             }
+
             .canvas-holder {
                 height: 250px;
             }
+
             .table-container {
                 padding: 15px;
                 border-radius: 12px;
                 margin-top: 15px;
                 margin-bottom: 15px;
             }
+
             .table-title {
                 font-size: 15px;
             }
+
             .settings-card {
                 padding: 20px;
             }
@@ -650,14 +659,18 @@
             <img src="./asset/logo_rose-.webp" alt="Stackly Logo">
         </div>
 
-        <div class="sidebar-section-container" style="border-bottom: 2px solid rgba(255, 255, 255, 0.06); background-color: rgba(255, 255, 255, 0.01);">
+        <div class="sidebar-section-container"
+            style="border-bottom: 2px solid rgba(255, 255, 255, 0.06); background-color: rgba(255, 255, 255, 0.01);">
             <div class="section-title">
                 <i class="fas fa-chart-line" style="color: #ff007f; margin-right: 6px;"></i> Treasury & Operations
             </div>
             <ul class="sidebar-menu">
-                <li class="menu-item active" data-target="page-overview"><a><i class="fas fa-th-large"></i> Dashboard Overview</a></li>
-                <li class="menu-item" data-target="page-budget"><a><i class="fas fa-wallet"></i> Budget Management</a></li>
-                <li class="menu-item" data-target="page-reports"><a><i class="fas fa-file-invoice-dollar"></i> Financial Reports</a></li>
+                <li class="menu-item active" data-target="page-overview"><a><i class="fas fa-th-large"></i> Dashboard
+                        Overview</a></li>
+                <li class="menu-item" data-target="page-budget"><a><i class="fas fa-wallet"></i> Budget Management</a>
+                </li>
+                <li class="menu-item" data-target="page-reports"><a><i class="fas fa-file-invoice-dollar"></i> Financial
+                        Reports</a></li>
             </ul>
         </div>
 
@@ -666,7 +679,8 @@
                 <i class="fas fa-sliders-h" style="color: #ff007f; margin-right: 6px;"></i> Configuration Panel
             </div>
             <ul class="sidebar-menu">
-                <li class="menu-item" data-target="page-settings"><a><i class="fas fa-user-cog"></i> System Settings</a></li>
+                <li class="menu-item" data-target="page-settings"><a><i class="fas fa-user-cog"></i> System Settings</a>
+                </li>
             </ul>
         </div>
     </aside>
@@ -691,7 +705,8 @@
             <div class="content-page active-view" id="page-overview">
                 <div class="welcome-card">
                     <h2 id="welcomeMsg">Welcome Back!</h2>
-                    <p>Enterprise Treasury Operations Dashboard Matrix. Monitor live budgets, optimize tax ledgers, and audit cash flow analytics indices with cross-border safety layers configuration.</p>
+                    <p>Enterprise Treasury Operations Dashboard Matrix. Monitor live budgets, optimize tax ledgers, and
+                        audit cash flow analytics indices with cross-border safety layers configuration.</p>
                 </div>
                 <div class="metrics-grid">
                     <div class="metric-card">
@@ -699,7 +714,8 @@
                             <h3>Total Revenue</h3>
                             <p>$645,800</p>
                         </div>
-                        <div class="metric-icon" style="background:#e6fcf5; color:#0ca678;"><i class="fas fa-arrow-trend-up"></i></div>
+                        <div class="metric-icon" style="background:#e6fcf5; color:#0ca678;"><i
+                                class="fas fa-arrow-trend-up"></i></div>
                     </div>
                     <div class="metric-card">
                         <div class="metric-meta">
@@ -713,7 +729,8 @@
                             <h3>Workspace Group</h3>
                             <p>Finance Dept</p>
                         </div>
-                        <div class="metric-icon" style="background:#edf2ff; color:#4c6ef5;"><i class="fas fa-users"></i></div>
+                        <div class="metric-icon" style="background:#edf2ff; color:#4c6ef5;"><i class="fas fa-users"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="charts-container-grid">
@@ -737,7 +754,8 @@
             <div class="content-page" id="page-budget">
                 <div class="welcome-card" style="background: linear-gradient(135deg, #0b1a15 0%, #17362c 100%);">
                     <h2>Budget Allocation & Strategic Forecasts</h2>
-                    <p>Track multi-department operational limits, review capital allocations, and verify real-time expense thresholds across active quarters.</p>
+                    <p>Track multi-department operational limits, review capital allocations, and verify real-time
+                        expense thresholds across active quarters.</p>
                 </div>
                 <div class="table-container">
                     <div class="table-title"><i class="fas fa-wallet"></i> 1. Departmental Budget Allocation</div>
@@ -800,7 +818,8 @@
                     </table>
                 </div>
                 <div class="table-container">
-                    <div class="table-title"><i class="fas fa-magic"></i> 3. Predictive Capital Budget Forecasts (Q3-Q4)</div>
+                    <div class="table-title"><i class="fas fa-magic"></i> 3. Predictive Capital Budget Forecasts (Q3-Q4)
+                    </div>
                     <table>
                         <thead>
                             <tr>
@@ -825,10 +844,12 @@
             <div class="content-page" id="page-reports">
                 <div class="welcome-card" style="background: linear-gradient(135deg, #0b1a15 0%, #20121a 100%);">
                     <h2>Regulatory Statement Documentation Vault</h2>
-                    <p>Review absolute core accounting statements. Monitor cash inflows, evaluate net income margins, and audit asset valuations.</p>
+                    <p>Review absolute core accounting statements. Monitor cash inflows, evaluate net income margins,
+                        and audit asset valuations.</p>
                 </div>
                 <div class="table-container">
-                    <div class="table-title"><i class="fas fa-money-check-dollar"></i> 1. Unified Corporate Income Statement</div>
+                    <div class="table-title"><i class="fas fa-money-check-dollar"></i> 1. Unified Corporate Income
+                        Statement</div>
                     <table>
                         <thead>
                             <tr>
@@ -876,7 +897,8 @@
                     </table>
                 </div>
                 <div class="table-container">
-                    <div class="table-title"><i class="fas fa-scale-balanced"></i> 3. Comprehensive Balance Sheet Matrix</div>
+                    <div class="table-title"><i class="fas fa-scale-balanced"></i> 3. Comprehensive Balance Sheet Matrix
+                    </div>
                     <table>
                         <thead>
                             <tr>
@@ -901,28 +923,35 @@
             <div class="content-page" id="page-settings">
                 <div class="welcome-card" style="background: linear-gradient(135deg, #0b1a15 0%, #361717 100%);">
                     <h2>Enterprise Configuration Management Panel</h2>
-                    <p>Adjust profile aliases, configure transactional push alerts constraints, and adjust interface workspace safety settings.</p>
+                    <p>Adjust profile aliases, configure transactional push alerts constraints, and adjust interface
+                        workspace safety settings.</p>
                 </div>
                 <div class="settings-grid-layout">
                     <div class="settings-card">
                         <h4><i class="fas fa-user-circle"></i> 1. Profile Settings</h4>
                         <form onsubmit="event.preventDefault(); alert('Profile updated smoothly!');">
-                            <div class="form-block"><label>Active Manager Full Name</label><input type="text" value="Finance Executive Leader" required></div>
-                            <div class="form-block"><label>Primary Corporate Email Anchor</label><input type="email" value="manager@fintrust.com" required></div>
+                            <div class="form-block"><label>Active Manager Full Name</label><input type="text"
+                                    value="Finance Executive Leader" required></div>
+                            <div class="form-block"><label>Primary Corporate Email Anchor</label><input type="email"
+                                    value="manager@fintrust.com" required></div>
                             <button type="submit" class="save-settings-btn">Update Profile Handles</button>
                         </form>
                     </div>
                     <div class="settings-card">
                         <h4><i class="fas fa-bell"></i> 2. Notification Preferences</h4>
                         <form onsubmit="event.preventDefault(); alert('Push notifications modified successfully!');">
-                            <div class="form-block"><label>Overrun Threshold Alert System</label><select><option>Instant Real-Time Push Alerts Trigger</option></select></div>
+                            <div class="form-block"><label>Overrun Threshold Alert System</label><select>
+                                    <option>Instant Real-Time Push Alerts Trigger</option>
+                                </select></div>
                             <button type="submit" class="save-settings-btn">Lock Notification Rules</button>
                         </form>
                     </div>
                     <div class="settings-card">
                         <h4><i class="fas fa-shield-halved"></i> 3. Security Settings</h4>
                         <form onsubmit="event.preventDefault(); alert('Crypto token bounds updated successfully!');">
-                            <div class="form-block"><label>Multi-Factor Authentication Layer</label><select><option>Biometric Hardware Core Token Enabled</option></select></div>
+                            <div class="form-block"><label>Multi-Factor Authentication Layer</label><select>
+                                    <option>Biometric Hardware Core Token Enabled</option>
+                                </select></div>
                             <button type="submit" class="save-settings-btn">Apply Crypto Tokens Core</button>
                         </form>
                     </div>
@@ -932,7 +961,6 @@
     </main>
 
     <script>
-        // Session Verification Safety Interlocks
         const rawSession = sessionStorage.getItem('activeSessionUser');
         if (!rawSession) {
             alert('Access Denied. Missing authorization token session cache logs. Switching back to sign in gateway.');
@@ -948,7 +976,6 @@
             document.getElementById('avatarInitial').innerText = user.name.charAt(0).toUpperCase();
         }
 
-        // Dashboard Views Toggles
         const sidebarMenuItems = document.querySelectorAll('.sidebar-menu .menu-item');
         const contentPagesList = document.querySelectorAll('.content-page');
         const headerTitleNode = document.getElementById('currentPageHeaderTitle');
@@ -974,14 +1001,12 @@
 
                 headerTitleNode.innerText = item.querySelector('a').textContent.trim();
 
-                // Immediately retract sidebar on mobile after item select
                 if (window.innerWidth <= 900) {
                     closeMobileSidebarMenu();
                 }
             });
         });
 
-        // Hamburger Menu Event Triggers
         document.getElementById('barToggleBtn').addEventListener('click', () => {
             sidebarRef.classList.add('active');
             menuOverlayRef.classList.add('active');
@@ -989,7 +1014,6 @@
 
         menuOverlayRef.addEventListener('click', closeMobileSidebarMenu);
 
-        // Terminate App Lifecycle Event
         const actionLogoutBtnDOMNode = document.getElementById('logoutBtn');
         if (actionLogoutBtnDOMNode) {
             actionLogoutBtnDOMNode.addEventListener('click', (event) => {
@@ -1000,7 +1024,6 @@
             });
         }
 
-        // ================= CHART ENGINE =================
         Chart.defaults.color = '#555555';
         Chart.defaults.font.family = "'Segoe UI', sans-serif";
 

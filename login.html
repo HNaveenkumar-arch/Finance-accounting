@@ -121,7 +121,6 @@
             box-shadow: 0 0 0 4px rgba(255, 0, 127, 0.1);
         }
 
-        /* 🚨 ERROR MESSAGES STYLING 🚨 */
         .field-error {
             color: #dc2626;
             font-size: 12px;
@@ -450,7 +449,6 @@
             return emailRegexPattern.test(emailStr);
         }
 
-        // ================= 🚨 ACCOUNT REGISTRATION VALIDATION 🚨 =================
         document.getElementById('signUpForm').addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -462,7 +460,6 @@
 
             let isFormValid = true;
 
-            // Name Check
             const nameErrDiv = document.getElementById('regNameError');
             if (name === "") {
                 nameErrDiv.style.display = 'block';
@@ -471,7 +468,6 @@
                 nameErrDiv.style.display = 'none';
             }
 
-            // Email Check
             const emailErrDiv = document.getElementById('regEmailError');
             if (email === "") {
                 emailErrDiv.innerText = "Email is required!";
@@ -485,7 +481,6 @@
                 emailErrDiv.style.display = 'none';
             }
 
-            // Password Check
             const passErrDiv = document.getElementById('regPassError');
             if (pass === "") {
                 passErrDiv.innerText = "Password is required!";
@@ -499,7 +494,6 @@
                 passErrDiv.style.display = 'none';
             }
 
-            // Confirm Password Check
             const confirmPassErrDiv = document.getElementById('regConfirmPasswordError');
             if (confirmPass === "") {
                 confirmPassErrDiv.innerText = "Please confirm your password!";
@@ -526,7 +520,6 @@
             document.getElementById('signUpForm').reset();
         });
 
-        // ================= 🚨 LOGIN VALIDATION 🚨 =================
         document.getElementById('loginForm').addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -536,7 +529,6 @@
 
             let isLoginValid = true;
 
-            // Email Check
             const loginEmailErrDiv = document.getElementById('loginEmailError');
             if (emailInputVal === "") {
                 loginEmailErrDiv.innerText = "Email is required!";
@@ -550,7 +542,6 @@
                 loginEmailErrDiv.style.display = 'none';
             }
 
-            // Password Check
             const loginPassErrDiv = document.getElementById('loginPassError');
             if (passInputVal === "") {
                 loginPassErrDiv.style.display = 'block';

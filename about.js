@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ================= 1. INITIALIZE AOS ANIMATION =================
+
     AOS.init({
-        once: true, // Animation happens only once when scrolling down
-        offset: 50, // Trigger point from bottom
+        once: true,
+        offset: 50,
         easing: 'ease-in-out',
     });
 
-    // ================= 2. HERO TEXT REVEAL ANIMATION (Custom) =================
+
     const words = document.querySelectorAll('.word-text');
     const breadcrumb = document.querySelector('.breadcrumb');
 
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }, totalWordAnimTime);
     }
 
-    // ================= 3. MOBILE HAMBURGER MENU TOGGLE =================
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
 
@@ -38,17 +37,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const icon = mobileMenuBtn.querySelector('i');
             if (navLinks.classList.contains('active')) {
+
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden';
             } else {
+
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
             }
         });
     }
 
-    // ================= 4. NEWSLETTER FORM SUBMISSION =================
- 
+
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -72,12 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 };
                 updateCount();
-                observer.unobserve(counter); // Trigger only once
+                observer.unobserve(counter);
             }
         });
     };
 
-    // Intersection Observer to detect when section comes into view
     const observer = new IntersectionObserver(startCounter, {
         threshold: 0.5,
     });

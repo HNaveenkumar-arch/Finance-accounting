@@ -14,7 +14,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
-        
+
         body {
             background-color: #f4f6f8;
             display: flex;
@@ -22,12 +22,10 @@
             overflow-x: hidden;
             width: 100vw;
         }
-        /* ================= 🚨 ACCOUNTANT AMETHYST PURPLE SIDEBAR LAYOUT 🚨 ================= */
-        
+
         .sidebar {
             width: 280px;
             background-color: #1e1b4b;
-            /* Deep Luxury Amethyst Navy Base Overrides */
             color: white;
             display: flex;
             flex-direction: column;
@@ -38,9 +36,8 @@
             top: 0;
             left: 0;
             overflow-y: auto;
-            /* Enable scroll if menu is too long */
         }
-        
+
         .sidebar-brand {
             padding: 20px 25px;
             display: flex;
@@ -48,18 +45,18 @@
             justify-content: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .sidebar-brand img {
             width: 100%;
             max-width: 160px;
             height: auto;
             object-fit: contain;
         }
-        
+
         .sidebar-section-container {
             padding: 20px 0 10px 0;
         }
-        
+
         .section-title {
             font-size: 11px;
             font-weight: 700;
@@ -68,11 +65,11 @@
             text-transform: uppercase;
             padding: 0 25px 12px 25px;
         }
-        
+
         .sidebar-menu {
             list-style: none;
         }
-        
+
         .sidebar-menu li a {
             display: flex;
             align-items: center;
@@ -85,17 +82,14 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .sidebar-menu li a:hover,
         .sidebar-menu li.active a {
             color: #ffffff;
             background-color: rgba(139, 92, 246, 0.15);
-            /* Soft Amethyst highlight box */
             border-left: 4px solid #8b5cf6;
-            /* Striking Purple Edge Identifier */
         }
-        /* Main Workspace Framework Coordinates Matrix Layout */
-        
+
         .main-content {
             margin-left: 280px;
             width: calc(100% - 280px);
@@ -105,7 +99,7 @@
             flex-direction: column;
             position: relative;
         }
-        
+
         .dashboard-header {
             background: #ffffff;
             padding: 20px 40px;
@@ -118,25 +112,25 @@
             top: 0;
             z-index: 100;
         }
-        
+
         .header-left {
             display: flex;
             align-items: center;
             gap: 20px;
         }
-        
+
         .header-left h1 {
             font-size: 22px;
             color: #1e1b4b;
             font-weight: 800;
         }
-        
+
         .header-profile-box {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        
+
         .prof-avatar {
             width: 42px;
             height: 42px;
@@ -150,23 +144,23 @@
             font-weight: 700;
             flex-shrink: 0;
         }
-        
+
         .prof-details {
             text-align: right;
         }
-        
+
         .prof-name {
             font-size: 15px;
             font-weight: 700;
             color: #1a1a1a;
         }
-        
+
         .prof-email {
             font-size: 12px;
             color: #666;
             font-weight: 600;
         }
-        
+
         .logout-btn {
             padding: 8px 16px;
             background: #8b5cf6;
@@ -179,69 +173,69 @@
             transition: all 0.3s ease;
             white-space: nowrap;
         }
-        
+
         .logout-btn:hover {
             background: #7c3aed;
         }
-        
+
         .dashboard-body {
             padding: 40px;
             flex: 1;
             width: 100%;
             max-width: 100vw;
         }
-        
+
         .content-page {
             display: none;
         }
-        
+
         .content-page.active-view {
             display: block !important;
             animation: fadeIn 0.4s ease;
         }
-        
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .welcome-card {
             background: #1e1b4b;
-            /* Deep Purple welcome panel overrides */
             color: white;
             padding: 35px;
             border-radius: 16px;
             margin-bottom: 30px;
             box-shadow: 0 10px 25px rgba(30, 27, 75, 0.1);
         }
-        
+
         .welcome-card h2 {
             font-size: 28px;
             font-weight: 800;
             margin-bottom: 10px;
             line-height: 1.2;
         }
-        
+
         .welcome-card p {
             color: #cbd5e1;
             font-size: 15px;
             max-width: 600px;
             line-height: 1.6;
         }
-        
+
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 25px;
             margin-bottom: 40px;
         }
-        
+
         .metric-card {
             background: white;
             padding: 25px;
@@ -252,7 +246,7 @@
             align-items: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
         }
-        
+
         .metric-meta h3 {
             font-size: 13px;
             color: #666;
@@ -261,13 +255,13 @@
             letter-spacing: 0.5px;
             margin-bottom: 8px;
         }
-        
+
         .metric-meta p {
             font-size: 24px;
             font-weight: 800;
             color: #1e1b4b;
         }
-        
+
         .metric-icon {
             width: 50px;
             height: 50px;
@@ -280,7 +274,7 @@
             font-size: 20px;
             flex-shrink: 0;
         }
-        
+
         .chart-wrapper-box {
             background: #ffffff;
             padding: 25px;
@@ -291,7 +285,7 @@
             width: 100%;
             overflow: hidden;
         }
-        
+
         .chart-wrapper-box h3 {
             font-size: 16px;
             color: #1e1b4b;
@@ -302,18 +296,17 @@
             gap: 10px;
             flex-wrap: wrap;
         }
-        
+
         .chart-wrapper-box h3 i {
             color: #8b5cf6;
         }
-        
+
         .canvas-holder {
             position: relative;
             width: 100%;
             height: 320px;
         }
-        /* ================= TABLES COMPONENT LAYOUTS ================= */
-        
+
         .table-container {
             background: #ffffff;
             padding: 25px;
@@ -329,7 +322,7 @@
             -webkit-overflow-scrolling: touch;
             display: block;
         }
-        
+
         .table-title {
             font-size: 18px;
             font-weight: 800;
@@ -340,18 +333,18 @@
             gap: 10px;
             white-space: nowrap;
         }
-        
+
         .table-title i {
             color: #8b5cf6;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
             min-width: 700px;
         }
-        
+
         th {
             background-color: #f8fafc;
             padding: 14px 16px;
@@ -363,7 +356,7 @@
             border-bottom: 2px solid #e2e8f0;
             white-space: nowrap;
         }
-        
+
         td {
             padding: 16px;
             border-bottom: 1px solid #eef2f1;
@@ -372,11 +365,11 @@
             font-weight: 600;
             white-space: nowrap;
         }
-        
+
         tr:hover td {
             background-color: #f8fafc;
         }
-        
+
         .status-badge {
             padding: 5px 12px;
             border-radius: 20px;
@@ -385,36 +378,36 @@
             display: inline-block;
             text-align: center;
         }
-        
+
         .status-success {
             background-color: #e6fcf5;
             color: #0ca678;
         }
-        
+
         .status-warning {
             background-color: #fff9db;
             color: #f59f00;
         }
-        
+
         .status-danger {
             background-color: #fff5f5;
             color: #ff6b6b;
         }
-        
+
         .settings-grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 20px;
         }
-        
+
         .settings-card {
             background: white;
             padding: 25px;
             border-radius: 12px;
             border: 1px solid #e2e8f0;
         }
-        
+
         .settings-card h4 {
             font-size: 15px;
             font-weight: 800;
@@ -425,7 +418,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         .form-block {
             display: flex;
             flex-direction: column;
@@ -433,13 +426,13 @@
             margin-bottom: 15px;
             width: 100%;
         }
-        
+
         .form-block label {
             font-size: 12px;
             font-weight: 700;
             color: #475569;
         }
-        
+
         .form-block input,
         .form-block select {
             padding: 12px 15px;
@@ -451,14 +444,14 @@
             outline: none;
             width: 100%;
         }
-        
+
         .form-block input:focus,
         .form-block select:focus {
             border-color: #8b5cf6;
             background-color: #ffffff;
             box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
         }
-        
+
         .save-settings-btn {
             padding: 12px 24px;
             background-color: #8b5cf6;
@@ -472,18 +465,17 @@
             box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
             width: 100%;
         }
-        
+
         @media(min-width: 480px) {
             .save-settings-btn {
                 width: fit-content;
             }
         }
-        
+
         .save-settings-btn:hover {
             background-color: #7c3aed;
         }
-        /* Mobile Layout Backdrops blur */
-        
+
         .sidebar-overlay {
             position: fixed;
             top: 0;
@@ -497,12 +489,12 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
+
         .sidebar-overlay.active {
             display: block;
             opacity: 1;
         }
-        
+
         .hamburger-menu {
             display: none;
             font-size: 24px;
@@ -510,112 +502,132 @@
             cursor: pointer;
             padding: 5px;
         }
-        /* ================= 🚨 EXPLICIT MOBILE MEDIA QUERIES 🚨 ================= */
-        
+
         @media (max-width: 900px) {
             .sidebar {
                 transform: translateX(-100%);
             }
+
             .sidebar.active {
                 transform: translateX(0);
                 box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
             }
+
             .main-content {
                 margin-left: 0;
                 width: 100%;
             }
+
             .hamburger-menu {
                 display: block;
             }
+
             .dashboard-header {
                 padding: 15px 25px;
             }
+
             .dashboard-body {
                 padding: 25px;
                 width: 100%;
                 max-width: 100vw;
                 overflow-x: hidden;
             }
+
             .header-left h1 {
                 font-size: 20px;
             }
         }
-        
+
         @media (max-width: 768px) {
             .settings-grid-layout {
                 grid-template-columns: 1fr;
             }
-            /* Force settings to 1 column */
+
             .metrics-grid {
                 grid-template-columns: 1fr;
             }
-            /* Force metrics to 1 column on tablets/phones */
         }
-        
+
         @media (max-width: 480px) {
             .dashboard-header {
                 padding: 15px 15px;
             }
+
             .header-left {
                 gap: 10px;
             }
+
             .header-left h1 {
                 font-size: 16px;
             }
+
             .prof-details {
                 display: none;
             }
-            /* Hide name/email to save space */
+
             .prof-avatar {
                 width: 36px;
                 height: 36px;
                 font-size: 14px;
             }
+
             .logout-btn {
                 padding: 6px 12px;
                 font-size: 12px;
             }
+
             .dashboard-body {
                 padding: 15px;
             }
+
             .welcome-card {
                 padding: 20px;
                 border-radius: 12px;
                 margin-bottom: 20px;
             }
+
             .welcome-card h2 {
                 font-size: 20px;
             }
+
             .welcome-card p {
                 font-size: 13px;
             }
+
             .metric-card {
                 padding: 20px;
                 border-radius: 10px;
             }
+
             .metric-meta p {
                 font-size: 20px;
             }
+
             .chart-wrapper-box {
                 padding: 15px;
                 border-radius: 12px;
                 margin-bottom: 15px;
             }
+
             .chart-wrapper-box h3 {
                 font-size: 14px;
             }
+
             .canvas-holder {
                 height: 250px;
             }
+
             .table-container {
                 padding: 15px;
                 border-radius: 12px;
                 margin-top: 15px;
                 margin-bottom: 15px;
             }
+
             .table-title {
                 font-size: 15px;
             }
+
             .settings-card {
                 padding: 20px;
             }
@@ -632,18 +644,25 @@
             <img src="./asset/logo_rose-.webp" alt="Stackly Logo">
         </div>
 
-        <div class="sidebar-section-container" style="border-bottom: 2px solid rgba(255, 255, 255, 0.06); background-color: rgba(255, 255, 255, 0.01);">
-            <div class="section-title"><i class="fas fa-book" style="color: #8b5cf6; margin-right: 6px;"></i> Ledger Logs</div>
+        <div class="sidebar-section-container"
+            style="border-bottom: 2px solid rgba(255, 255, 255, 0.06); background-color: rgba(255, 255, 255, 0.01);">
+            <div class="section-title"><i class="fas fa-book" style="color: #8b5cf6; margin-right: 6px;"></i> Ledger
+                Logs</div>
             <ul class="sidebar-menu">
-                <li class="menu-item active" data-target="page-overview"><a><i class="fas fa-th-large"></i> Dashboard Overview</a></li>
-                <li class="menu-item" data-target="page-transactions"><a><i class="fas fa-exchange-alt"></i> Transactions</a></li>
-                <li class="menu-item" data-target="page-invoices"><a><i class="fas fa-file-invoice"></i> Invoices Panel</a></li>
+                <li class="menu-item active" data-target="page-overview"><a><i class="fas fa-th-large"></i> Dashboard
+                        Overview</a></li>
+                <li class="menu-item" data-target="page-transactions"><a><i class="fas fa-exchange-alt"></i>
+                        Transactions</a></li>
+                <li class="menu-item" data-target="page-invoices"><a><i class="fas fa-file-invoice"></i> Invoices
+                        Panel</a></li>
             </ul>
         </div>
         <div class="sidebar-section-container" style="background-color: rgba(0, 0, 0, 0.12);">
-            <div class="section-title"><i class="fas fa-sliders-h" style="color: #8b5cf6; margin-right: 6px;"></i> Preferences & Access</div>
+            <div class="section-title"><i class="fas fa-sliders-h" style="color: #8b5cf6; margin-right: 6px;"></i>
+                Preferences & Access</div>
             <ul class="sidebar-menu">
-                <li class="menu-item" data-target="page-settings"><a><i class="fas fa-user-cog"></i> System Settings</a></li>
+                <li class="menu-item" data-target="page-settings"><a><i class="fas fa-user-cog"></i> System Settings</a>
+                </li>
             </ul>
         </div>
     </aside>
@@ -668,7 +687,9 @@
             <div class="content-page active-view" id="page-overview">
                 <div class="welcome-card">
                     <h2 id="welcomeMsg">Welcome, Accountant!</h2>
-                    <p>Enterprise Ledger Processing Core Panel. Track active cash flow matrix streams, generate double-entry statements balances, and reconcile global supplier invoices securely inside unified database stacks.</p>
+                    <p>Enterprise Ledger Processing Core Panel. Track active cash flow matrix streams, generate
+                        double-entry statements balances, and reconcile global supplier invoices securely inside unified
+                        database stacks.</p>
                 </div>
                 <div class="metrics-grid">
                     <div class="metric-card">
@@ -683,14 +704,16 @@
                             <h3>Pending Payments</h3>
                             <p>24 Batches</p>
                         </div>
-                        <div class="metric-icon" style="background:#fff5f5; color:#ff6b6b;"><i class="fas fa-clock"></i></div>
+                        <div class="metric-icon" style="background:#fff5f5; color:#ff6b6b;"><i class="fas fa-clock"></i>
+                        </div>
                     </div>
                     <div class="metric-card">
                         <div class="metric-meta">
                             <h3>Account Summary</h3>
                             <p>100% Synced</p>
                         </div>
-                        <div class="metric-icon" style="background:#e6fcf5; color:#0ca678;"><i class="fas fa-check-circle"></i></div>
+                        <div class="metric-icon" style="background:#e6fcf5; color:#0ca678;"><i
+                                class="fas fa-check-circle"></i></div>
                     </div>
                 </div>
 
@@ -705,13 +728,17 @@
             <div class="content-page" id="page-transactions">
                 <div class="welcome-card" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);">
                     <h2>Double-Entry Transaction History Tracker</h2>
-                    <p>Review real-time transaction tracking fields, insert new entry structures, and verify payment settlements.</p>
+                    <p>Review real-time transaction tracking fields, insert new entry structures, and verify payment
+                        settlements.</p>
                 </div>
                 <div class="table-container">
                     <div class="table-title"><i class="fas fa-plus-circle"></i> 1. Insert New Transaction Entry</div>
-                    <form class="settings-grid-layout" style="margin-top:10px;" onsubmit="event.preventDefault(); alert('Transaction processed successfully!');">
-                        <div class="form-block"><label>Account Class Code Selector</label><input type="text" placeholder="e.g., ACC-DEBIT-99" required></div>
-                        <div class="form-block"><label>Transaction Capital Volume ($)</label><input type="number" placeholder="Enter transaction amount" required></div>
+                    <form class="settings-grid-layout" style="margin-top:10px;"
+                        onsubmit="event.preventDefault(); alert('Transaction processed successfully!');">
+                        <div class="form-block"><label>Account Class Code Selector</label><input type="text"
+                                placeholder="e.g., ACC-DEBIT-99" required></div>
+                        <div class="form-block"><label>Transaction Capital Volume ($)</label><input type="number"
+                                placeholder="Enter transaction amount" required></div>
                         <button type="submit" class="save-settings-btn">Post to General Ledger</button>
                     </form>
                 </div>
@@ -741,18 +768,24 @@
             <div class="content-page" id="page-invoices">
                 <div class="welcome-card" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);">
                     <h2>Enterprise Billing & Invoice Generator</h2>
-                    <p>Draft professional customer invoices, monitor outstanding pending payments arrays, and filter past settled balance sheets accounts rows.</p>
+                    <p>Draft professional customer invoices, monitor outstanding pending payments arrays, and filter
+                        past settled balance sheets accounts rows.</p>
                 </div>
                 <div class="table-container">
-                    <div class="table-title"><i class="fas fa-file-signature"></i> 1. Draft Professional Customer Invoice</div>
-                    <form class="settings-grid-layout" style="margin-top:10px;" onsubmit="event.preventDefault(); alert('Billing Invoice dispatched!');">
-                        <div class="form-block"><label>Client Enterprise Corporate Name</label><input type="text" placeholder="e.g., TechCorp Solutions" required></div>
-                        <div class="form-block"><label>Total Outstanding Billing Amount ($)</label><input type="number" placeholder="0.00" required></div>
+                    <div class="table-title"><i class="fas fa-file-signature"></i> 1. Draft Professional Customer
+                        Invoice</div>
+                    <form class="settings-grid-layout" style="margin-top:10px;"
+                        onsubmit="event.preventDefault(); alert('Billing Invoice dispatched!');">
+                        <div class="form-block"><label>Client Enterprise Corporate Name</label><input type="text"
+                                placeholder="e.g., TechCorp Solutions" required></div>
+                        <div class="form-block"><label>Total Outstanding Billing Amount ($)</label><input type="number"
+                                placeholder="0.00" required></div>
                         <button type="submit" class="save-settings-btn">Generate & Dispatch Bill</button>
                     </form>
                 </div>
                 <div class="table-container">
-                    <div class="table-title"><i class="fas fa-hourglass-start"></i> 2. Pending & Settled Invoices Status Logs</div>
+                    <div class="table-title"><i class="fas fa-hourglass-start"></i> 2. Pending & Settled Invoices Status
+                        Logs</div>
                     <table>
                         <thead>
                             <tr>
@@ -777,21 +810,26 @@
             <div class="content-page" id="page-settings">
                 <div class="welcome-card" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);">
                     <h2>Configuration Management System</h2>
-                    <p>Modify personal user profiles info, tweak balance statement viewing preferences, and adjust password parameters.</p>
+                    <p>Modify personal user profiles info, tweak balance statement viewing preferences, and adjust
+                        password parameters.</p>
                 </div>
                 <div class="settings-grid-layout">
                     <div class="settings-card">
                         <h4><i class="fas fa-user-circle"></i> 1. Profile Settings</h4>
                         <form onsubmit="event.preventDefault(); alert('Accountant Profile Information Cached!');">
-                            <div class="form-block"><label>Full Staff Name Alias</label><input type="text" value="Senior Accounting Ledger Associate" required></div>
-                            <div class="form-block"><label>Operational Enterprise Email Routing</label><input type="email" value="accountant@fintrust.com" required></div>
+                            <div class="form-block"><label>Full Staff Name Alias</label><input type="text"
+                                    value="Senior Accounting Ledger Associate" required></div>
+                            <div class="form-block"><label>Operational Enterprise Email Routing</label><input
+                                    type="email" value="accountant@fintrust.com" required></div>
                             <button type="submit" class="save-settings-btn">Update Profile Metadata</button>
                         </form>
                     </div>
                     <div class="settings-card">
                         <h4><i class="fas fa-sliders-h"></i> 2. Account Preferences</h4>
                         <form onsubmit="event.preventDefault(); alert('Ledger formatting rules locked!');">
-                            <div class="form-block"><label>Fiscal Calendar Accounting Formatting</label><select><option>Standard Dual-Entry Closing System</option></select></div>
+                            <div class="form-block"><label>Fiscal Calendar Accounting Formatting</label><select>
+                                    <option>Standard Dual-Entry Closing System</option>
+                                </select></div>
                             <button type="submit" class="save-settings-btn">Lock General Preferences</button>
                         </form>
                     </div>
@@ -839,14 +877,12 @@
                 }
                 headerTitleNodeText.innerText = item.querySelector('a').textContent.trim();
 
-                // Immediately close sidebar on small screens after clicking a link
                 if (window.innerWidth <= 900) {
                     closeMobileSidebarMenu();
                 }
             });
         });
 
-        // Hamburger trigger
         document.getElementById('barToggleBtn').addEventListener('click', () => {
             sidebarDOMNodeRef.classList.add('active');
             menuOverlayBackdropRef.classList.add('active');
@@ -863,7 +899,6 @@
             });
         }
 
-        // ================= CHART ENGINE =================
         Chart.defaults.color = '#64748b';
         Chart.defaults.font.family = "'Segoe UI', sans-serif";
 

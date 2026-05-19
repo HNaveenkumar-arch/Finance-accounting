@@ -2,194 +2,197 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Page Not Found | Stackly</title>
-  
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Stackly</title>
 
-  <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    }
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    body {
-        background-color: #0b1a15; /* Stackly Deep Dark Green */
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        overflow: hidden;
-    }
-
-    .pagecontent {
-        text-align: center;
-        padding: 40px 20px;
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        max-width: 800px;
-    }
-
-    /* Subtle Pink Glow behind the 404 text */
-    .pagecontent::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 350px;
-        height: 350px;
-        background: radial-gradient(circle, rgba(255, 0, 127, 0.15) 0%, rgba(11, 26, 21, 0) 70%);
-        z-index: -1;
-        border-radius: 50%;
-    }
-
-    .glitch-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Massive Premium 404 Text - Fluid size for responsiveness */
-    .error-title {
-        font-size: clamp(6rem, 20vw, 12rem); 
-        font-weight: 900;
-        line-height: 1;
-        margin: 0;
-        background: linear-gradient(135deg, #ffffff 0%, #b3c5c0 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0px 15px 40px rgba(255, 0, 127, 0.2);
-        letter-spacing: -5px;
-        margin-bottom: 15px;
-    }
-
-    .error-subtitle {
-        font-size: 1.4rem;
-        font-weight: 500;
-        color: #b3c5c0;
-        margin-bottom: 45px;
-        line-height: 1.5;
-        max-width: 600px;
-    }
-
-    /* Buttons Layout */
-    .button-group {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    /* Base Button Styling */
-    .home-btn {
-        padding: 16px 35px;
-        border-radius: 12px;
-        font-size: 1.05rem;
-        font-weight: 700;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Primary Button (Go Back) */
-    .home-btn:not(.login-style) {
-        background-color: #ff007f;
-        color: #ffffff;
-        box-shadow: 0 10px 25px rgba(255, 0, 127, 0.2);
-    }
-
-    .home-btn:not(.login-style):hover {
-        background-color: #d6006b;
-        transform: translateY(-3px);
-        box-shadow: 0 15px 30px rgba(255, 0, 127, 0.3);
-    }
-
-    /* Secondary Button (Go to Login) */
-    .home-btn.login-style {
-        background-color: transparent;
-        color: #ffffff;
-        border: 2px solid #4a665d;
-    }
-
-    .home-btn.login-style:hover {
-        border-color: #ff007f;
-        color: #ff007f;
-        background: rgba(255, 0, 127, 0.05);
-        transform: translateY(-3px);
-    }
-
-    /* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
-    @media (max-width: 768px) {
-        .error-subtitle { 
-            font-size: 1.1rem; 
-            padding: 0 15px; 
-            margin-bottom: 35px;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
-        .button-group { 
-            flex-direction: column; 
-            width: 100%; 
-            max-width: 350px; /* Constrains button width neatly on tablets */
-            margin: 0 auto;
-            gap: 15px; 
-        }
-        .home-btn { 
-            width: 100%; 
-        }
-    }
 
-    @media (max-width: 480px) {
-        .error-title {
-            letter-spacing: -2px; /* Prevents text cutting off on very small screens */
+        body {
+            background-color: #0b1a15;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
         }
-        .error-subtitle {
-            font-size: 1rem;
+
+        .pagecontent {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 800px;
         }
+
+
         .pagecontent::before {
-            width: 250px;
-            height: 250px; /* Reduces glow size so it doesn't overpower small screens */
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(255, 0, 127, 0.15) 0%, rgba(11, 26, 21, 0) 70%);
+            z-index: -1;
+            border-radius: 50%;
         }
+
+        .glitch-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .error-title {
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: 900;
+            line-height: 1;
+            margin: 0;
+            background: linear-gradient(135deg, #ffffff 0%, #b3c5c0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 15px 40px rgba(255, 0, 127, 0.2);
+            letter-spacing: -5px;
+            margin-bottom: 15px;
+        }
+
+        .error-subtitle {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #b3c5c0;
+            margin-bottom: 45px;
+            line-height: 1.5;
+            max-width: 600px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
         .home-btn {
-            padding: 14px 25px;
-            font-size: 1rem;
+            padding: 16px 35px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
-    }
-  </style>
+
+
+        .home-btn:not(.login-style) {
+            background-color: #ff007f;
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(255, 0, 127, 0.2);
+        }
+
+        .home-btn:not(.login-style):hover {
+            background-color: #d6006b;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 0, 127, 0.3);
+        }
+
+
+        .home-btn.login-style {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #4a665d;
+        }
+
+        .home-btn.login-style:hover {
+            border-color: #ff007f;
+            color: #ff007f;
+            background: rgba(255, 0, 127, 0.05);
+            transform: translateY(-3px);
+        }
+
+
+        @media (max-width: 768px) {
+            .error-subtitle {
+                font-size: 1.1rem;
+                padding: 0 15px;
+                margin-bottom: 35px;
+            }
+
+            .button-group {
+                flex-direction: column;
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto;
+                gap: 15px;
+            }
+
+            .home-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-title {
+                letter-spacing: -2px;
+            }
+
+            .error-subtitle {
+                font-size: 1rem;
+            }
+
+            .pagecontent::before {
+                width: 250px;
+                height: 250px;
+            }
+
+            .home-btn {
+                padding: 14px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <main class="pagecontent">
-    <div class="glitch-container">
-      <h2 class="error-title" data-aos="fade-up" data-aos-duration="1000">404</h2>
-      <h3 class="error-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-        The corporate link is broken or the asset has been moved.
-      </h3>
+    <main class="pagecontent">
+        <div class="glitch-container">
+            <h2 class="error-title" data-aos="fade-up" data-aos-duration="1000">404</h2>
+            <h3 class="error-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                The corporate link is broken or the asset has been moved.
+            </h3>
 
-      <div class="button-group">
-        <a href="javascript:history.back()" class="home-btn" data-aos="fade-up" data-aos-delay="400">
-          <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Go Back
-        </a>
-      </div>
-    </div>
-  </main>
+            <div class="button-group">
+                <a href="javascript:history.back()" class="home-btn" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Go Back
+                </a>
+            </div>
+        </div>
+    </main>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Initialize Scroll Animations
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
 </body>
 
 </html>

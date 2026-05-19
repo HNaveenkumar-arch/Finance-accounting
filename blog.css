@@ -1,4 +1,3 @@
-/* ================= 🌟 BASE RESET & FONTS 🌟 ================= */
 * {
   margin: 0;
   padding: 0;
@@ -11,10 +10,6 @@ body {
   overflow-x: hidden;
   width: 100vw;
 }
-
-/* ================= 🌟 NAVBAR STYLING 🌟 ================= */
-
-/* ================= 🌟 HERO SECTION 🌟 ================= */
 .head-hero {
   background: linear-gradient(135deg, #0b1a15 0%, #17362c 100%);
   color: white;
@@ -41,7 +36,6 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* Text Animation Classes */
 .word-wrapper {
   display: inline-block;
   overflow: hidden;
@@ -85,9 +79,6 @@ body {
   margin: 0;
 }
 
-/* ================= 🌟 FOOTER SECTION 🌟 ================= */
-
-/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
 @media (max-width: 900px) {
   .nav-center ul {
     gap: 15px;
@@ -95,7 +86,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Navbar Mobile */
   .menu-toggle {
     display: block;
   }
@@ -142,7 +132,6 @@ body {
     width: auto;
   }
 
-  /* Hero & Footer Mobile */
   .head-hero {
     min-height: 40vh;
     padding: 50px 20px;
@@ -182,7 +171,6 @@ body {
     font-size: 0.9rem;
   }
   .input-group-wrapper {
-    /* flex-direction: column; */
     gap: 10px;
   }
   .input-group-wrapper input {
@@ -204,22 +192,18 @@ body {
   }
 }
 
-/* ================= 🌟 HOME INSIGHTS SECTION 🌟 ================= */
 .home-insights-section {
   padding: 100px 5%;
-  background-color: #ffffff; /* Clean white background */
+  background-color: #ffffff;
 }
 
-/* CSS Grid layout for automatic responsiveness */
 .insights-grid {
   display: grid;
-  /* Auto-fit makes it automatically switch to 1 column on mobile, 2 on tablet, 3 on desktop */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   margin-bottom: 50px;
 }
 
-/* Individual Card */
 .insight-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -237,7 +221,6 @@ body {
   border-color: rgba(255, 0, 127, 0.2);
 }
 
-/* Image Hover Zoom Effect */
 .insight-img-wrapper {
   width: 100%;
   height: 220px;
@@ -256,7 +239,6 @@ body {
   transform: scale(1.08);
 }
 
-/* Floating Pink Badge */
 .insight-badge {
   position: absolute;
   top: 15px;
@@ -272,7 +254,6 @@ body {
   box-shadow: 0 4px 10px rgba(255, 0, 127, 0.3);
 }
 
-/* Card Content Area */
 .insight-content {
   padding: 25px;
   display: flex;
@@ -308,7 +289,7 @@ body {
 }
 
 .insight-card:hover .insight-content h3 a {
-  color: #ff007f; /* Title turns pink on hover */
+  color: #ff007f;
 }
 
 .insight-content p {
@@ -316,10 +297,9 @@ body {
   line-height: 1.6;
   font-size: 0.95rem;
   margin-bottom: 25px;
-  flex-grow: 1; /* Pushes the 'Read More' link to the bottom */
+  flex-grow: 1;
 }
 
-/* Read More Link */
 .insight-read-more {
   display: inline-flex;
   align-items: center;
@@ -342,10 +322,9 @@ body {
 }
 
 .insight-card:hover .insight-read-more i {
-  transform: translateX(5px); /* Arrow slides right */
+  transform: translateX(5px);
 }
 
-/* View All Button */
 .view-all-container {
   text-align: center;
   margin-top: 20px;
@@ -370,14 +349,12 @@ body {
   transform: translateY(-2px);
 }
 
-/* ================= 📱 MOBILE RESPONSIVE TWEAKS 📱 ================= */
 @media (max-width: 768px) {
   .home-insights-section {
     padding: 60px 20px;
   }
 
   .insights-grid {
-    /* Forces 1 column strictly on phones to prevent squishing */
     grid-template-columns: 1fr;
     gap: 25px;
   }
@@ -386,7 +363,6 @@ body {
     font-size: 1.25rem;
   }
 }
-/* ================= 🌟 SECTION HEADER & CONTAINER STYLING 🌟 ================= */
 .service-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -422,17 +398,15 @@ body {
   font-size: 1.1rem;
 }
 
-/* Mobile responsive tweak for header */
 @media (max-width: 768px) {
   .service-header h2 {
     font-size: 2.2rem;
   }
 }
 
-/* ================= 🌟 TAX TIPS & STRATEGIES SECTION (DARK) 🌟 ================= */
 .tax-tips-section {
   padding: 100px 5%;
-  background-color: #0b1a15; /* Stackly Dark Theme */
+  background-color: #0b1a15;
   color: #ffffff;
 }
 
@@ -442,7 +416,6 @@ body {
   gap: 60px;
 }
 
-/* Left Intro Styling */
 .tips-intro {
   flex: 1;
 }
@@ -490,7 +463,6 @@ body {
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
 }
 
-/* Right Side Tips List */
 .tips-list {
   flex: 1.2;
   display: flex;
@@ -500,7 +472,7 @@ body {
 }
 
 .tip-card {
-  background: rgba(255, 255, 255, 0.03); /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 30px;
@@ -514,7 +486,7 @@ body {
 .tip-card:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: #ff007f;
-  transform: translateX(-15px); /* Card slides left on hover */
+  transform: translateX(-15px);
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -535,7 +507,7 @@ body {
 .tip-card:hover .tip-icon {
   background: #ff007f;
   color: #ffffff;
-  transform: rotateY(180deg); /* Icon flip effect */
+  transform: rotateY(180deg);
 }
 
 .tip-content h4 {
@@ -551,7 +523,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
 @media (max-width: 900px) {
   .tax-tips-container {
     flex-direction: column;
@@ -561,7 +532,7 @@ body {
     margin-bottom: 20px;
   }
   .tip-card:hover {
-    transform: translateY(-5px); /* Changes slide direction to UP on mobile */
+    transform: translateY(-5px);
   }
 }
 
@@ -580,10 +551,9 @@ body {
   }
 }
 
-/* ================= 🌟 VERTICAL TIMELINE SECTION STYLING (COLOR REDESIGN) 🌟 ================= */
 .guide-timeline-section {
   padding: 120px 5%;
-  background-color: #dcdcdfde; /* 🌟 Soft Premium Light Slate Background for contrast */
+  background-color: #dcdcdfde;
   position: relative;
 }
 
@@ -595,17 +565,16 @@ body {
   margin: 0 auto;
 }
 
-/* Left Side Sticky Panel Styling */
 .timeline-left-intro {
   flex: 1;
   position: sticky;
-  top: 140px; /* Locks right below sticky navbar */
+  top: 140px;
   height: auto;
   padding-bottom: 40px;
 }
 
 .timeline-left-intro .sub-title {
-  color: #ff007f; /* Stackly Pink */
+  color: #ff007f;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -617,7 +586,7 @@ body {
 .timeline-left-intro h2 {
   font-size: 3rem;
   font-weight: 800;
-  color: #0b1a15; /* Deep Corporate Green-Black */
+  color: #0b1a15;
   line-height: 1.2;
   margin-bottom: 20px;
 }
@@ -629,7 +598,6 @@ body {
   margin-bottom: 40px;
 }
 
-/* Visual timeline track */
 .timeline-progress-line {
   width: 4px;
   height: 100px;
@@ -637,7 +605,6 @@ body {
   border-radius: 4px;
 }
 
-/* Right Side Overlapping Cards Stack */
 .timeline-right-stack {
   flex: 1.3;
   display: flex;
@@ -645,21 +612,19 @@ body {
   gap: 40px;
 }
 
-/* Premium Timeline Card Architecture */
 .timeline-step-card {
-  background: #ffffff; /* 🌟 Pure Card White to pop out from Slate BG */
+  background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 24px;
   padding: 45px;
   position: relative;
-  box-shadow: 0 10px 30px rgba(11, 26, 21, 0.02); /* Crisp minimal shadow */
+  box-shadow: 0 10px 30px rgba(11, 26, 21, 0.02);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   gap: 30px;
   align-items: flex-start;
 }
 
-/* Left side accent indicator line inside the card */
 .timeline-step-card::before {
   content: "";
   position: absolute;
@@ -676,20 +641,19 @@ body {
 
 .timeline-step-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(255, 0, 127, 0.08); /* Pink corporate glow on hover */
+  box-shadow: 0 25px 50px rgba(255, 0, 127, 0.08);
   border-color: rgba(255, 0, 127, 0.2);
 }
 
 .timeline-step-card:hover::before {
-  opacity: 1; /* Neon border lines glow up on hover */
+  opacity: 1;
 }
 
-/* Numeric Step Badge Styling */
 .step-badge {
   position: absolute;
   top: -15px;
   right: 35px;
-  background: #0b1a15; /* Dark background default */
+  background: #0b1a15;
   color: #ffffff;
   padding: 6px 16px;
   border-radius: 30px;
@@ -701,15 +665,14 @@ body {
 }
 
 .timeline-step-card:hover .step-badge {
-  background: #ff007f; /* Changes to branded pink on hover */
+  background: #ff007f;
   box-shadow: 0 4px 12px rgba(255, 0, 127, 0.3);
 }
 
-/* Icon Box Setup inside Card */
 .step-icon-box {
   width: 65px;
   height: 65px;
-  background-color: #f1f5f9; /* 🌟 Darker background fill for high contrast */
+  background-color: #f1f5f9;
   border: 1px solid #e2e8f0;
   color: #0b1a15;
   border-radius: 16px;
@@ -728,7 +691,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Core Copywriting Configuration */
 .step-card-content h3 {
   font-size: 1.5rem;
   font-weight: 800;
@@ -744,7 +706,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Interactive Navigation Link */
 .step-link {
   display: inline-flex;
   align-items: center;
@@ -765,10 +726,9 @@ body {
 }
 
 .step-link:hover i {
-  transform: translateX(5px); /* Arrow moves smoothly */
+  transform: translateX(5px);
 }
 
-/* ================= 📱 MOBILE RESPONSIVE TWEAKS 📱 ================= */
 @media (max-width: 991px) {
   .timeline-wrapper {
     flex-direction: column;
@@ -808,10 +768,9 @@ body {
   }
 }
 
-/* ================= 🌟 INVESTMENT & WEALTH MANAGEMENT STYLE 🌟 ================= */
 .wealth-management-section {
   padding: 120px 5%;
-  background-color: #ffffff; /* Clean contrast following the previous slate-grey section */
+  background-color: #ffffff;
 }
 
 .wealth-container {
@@ -823,7 +782,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Left Column Styling */
 .wealth-info-block {
   flex: 1;
 }
@@ -853,7 +811,6 @@ body {
   margin-bottom: 35px;
 }
 
-/* Micro Stat Boxes Matrix */
 .wealth-stats-matrix {
   display: flex;
   gap: 20px;
@@ -884,7 +841,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Right Column Strategy List */
 .wealth-cards-grid {
   flex: 1.2;
   display: flex;
@@ -905,12 +861,11 @@ body {
 }
 
 .wealth-strategy-card:hover {
-  transform: translateX(12px); /* Moves right dynamically on hover */
+  transform: translateX(12px);
   box-shadow: 0 20px 40px rgba(255, 0, 127, 0.06);
   border-color: rgba(255, 0, 127, 0.2);
 }
 
-/* Icon Frame Architecture */
 .strategy-icon-frame {
   width: 60px;
   height: 60px;
@@ -945,7 +900,6 @@ body {
   margin: 0;
 }
 
-/* ================= 📱 MOBILE RESPONSIVE TWEAKS 📱 ================= */
 @media (max-width: 991px) {
   .wealth-container {
     flex-direction: column;
@@ -964,9 +918,7 @@ body {
     width: 100%;
   }
   .wealth-strategy-card:hover {
-    transform: translateY(
-      -5px
-    ); /* On tablet/mobile, slides UP instead of RIGHT */
+    transform: translateY(-5px);
   }
 }
 
@@ -991,14 +943,12 @@ body {
   }
 }
 
-/* ================= 🌟 EXPERT OPINIONS & ANALYSIS STYLE 🌟 ================= */
 .expert-analysis-section {
   padding: 120px 5%;
-  background-color: #0b1a15; /* Branded Premium Dark Theme */
+  background-color: #0b1a15;
   color: #ffffff;
 }
 
-/* Overriding global section headers for dark background consistency */
 .expert-analysis-section .service-header h2 {
   color: #ffffff;
 }
@@ -1007,7 +957,6 @@ body {
   color: #b3c5c0;
 }
 
-/* Stacked Slits Flex-Grid Configuration */
 .analysis-slits-grid {
   display: flex;
   flex-direction: column;
@@ -1018,7 +967,6 @@ body {
   margin-right: auto;
 }
 
-/* Glassmorphic Horizontal Row Card Blueprint */
 .analysis-slit-card {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1034,14 +982,13 @@ body {
 
 .analysis-slit-card:hover {
   background: rgba(255, 255, 255, 0.04);
-  border-color: #ff007f; /* Glow boundaries on hover */
+  border-color: #ff007f;
   transform: translateY(-5px);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.3),
     0 0 30px rgba(255, 0, 127, 0.05);
 }
 
-/* Left Profile Module Alignment */
 .expert-profile-wrapper {
   display: flex;
   align-items: center;
@@ -1062,7 +1009,7 @@ body {
 }
 
 .analysis-slit-card:hover .expert-avatar {
-  border-color: #ff007f; /* Image halo effect on item focus */
+  border-color: #ff007f;
 }
 
 .expert-meta-data h4 {
@@ -1080,19 +1027,17 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Right Text Copy Module Layout */
 .expert-quote-content {
   position: relative;
   flex-grow: 1;
 }
 
-/* Structural Backdrop Quotation Icon Marker */
 .quote-icon-mark {
   position: absolute;
   top: -35px;
   left: -20px;
   font-size: 6rem;
-  color: rgba(255, 0, 127, 0.08); /* Faint pink elegant block quote */
+  color: rgba(255, 0, 127, 0.08);
   font-family: "Georgia", serif;
   line-height: 1;
   pointer-events: none;
@@ -1108,7 +1053,6 @@ body {
   z-index: 2;
 }
 
-/* Trending Category Indicator pill */
 .trend-tag {
   display: inline-flex;
   align-items: center;
@@ -1126,7 +1070,6 @@ body {
   color: #ff007f;
 }
 
-/* ================= 📱 MOBILE RESPONSIVE TWEAKS 📱 ================= */
 @media (max-width: 900px) {
   .analysis-slit-card {
     flex-direction: column;

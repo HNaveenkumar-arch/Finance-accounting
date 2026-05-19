@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // 1. Initialize AOS (Scroll Animation)
     if (typeof AOS !== 'undefined') {
         AOS.init({
             once: true,
@@ -10,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. HERO TEXT REVEAL ANIMATION
     const words = document.querySelectorAll('.word-text');
     const breadcrumb = document.querySelector('.breadcrumb');
 
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }, totalWordAnimTime);
     }
 
-    // 3. MOBILE HAMBURGER MENU TOGGLE
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
 
@@ -43,27 +40,21 @@ document.addEventListener("DOMContentLoaded", () => {
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden';
             } else {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
             }
         });
     }
-
-    // 4. FOOTER NEWSLETTER FORM
-    
 });
 
-
-// ================= 🌟 5. FAQ ACCORDION LOGIC 🌟 =================
-// Onnu open panna mathathu automatic-ah close aaga
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
     item.addEventListener('toggle', () => {
-        // Current item open aagumbothu...
         if (item.open) {
-            // Matha ellathayum check panni close pannidu
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.removeAttribute('open');

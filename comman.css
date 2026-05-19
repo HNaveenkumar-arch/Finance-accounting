@@ -1,505 +1,423 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #ffffff;
-    overflow-x: hidden;
+  background-color: #ffffff;
+  overflow-x: hidden;
 }
-
-
-/* ==========================================================================
-   ================ NAVBAR FULL CSS (PREMIUM TRANSPARENT GLASS) =============
-   ========================================================================== */
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    /* PREMIUM TRANSPARENT GLASS EFFECT STYLES */
-    background-color: rgba(245, 245, 247, 0.75);
-    /* Soft white tint with 75% transparency alpha layer */
-    backdrop-filter: blur(12px);
-    /* High-end blurring effect for background elements passing behind the bar */
-    -webkit-backdrop-filter: blur(12px);
-    /* Safari support patch hook */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-    /* Softened shadow depth for seamless integration */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-    /* Ultra thin clean horizontal separation line stroke */
-    /* CORE STICKY LOCKS */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: rgba(245, 245, 247, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .sidebar-brand .brand-logo-img {
-    max-width: 140px;
-    height: auto;
-    object-fit: contain;
+  max-width: 140px;
+  height: auto;
+  object-fit: contain;
 }
 
 .nav-center ul {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  align-items: center;
 }
 
 .nav-center ul li a {
-    text-decoration: none;
-    color: #333333;
-    /* Darkened slightly to guarantee extreme readability on transparent states */
-    font-size: 16px;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
-
-
-/* Link Interactions Floating Glow */
-
-
-/* Navbar Link Base Styling */
 
 .nav-center a {
-    text-decoration: none;
-    color: #0b1a15;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 8px 16px;
-    /* Space inside the link for the hover background */
-    border-radius: 20px;
-    /* Smooth rounded corners */
-    transition: all 0.3s ease;
-    /* Smooth fade for both color and background */
+  text-decoration: none;
+  color: #0b1a15;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
-
-
-/* 🌹 Hover & Active State (White Text with Pink Background) */
 
 .nav-center ul li a:hover,
 .nav-center ul li a.active {
-    color: #ffffff;
-    background-color: #ff007f;
-    box-shadow: 0 4px 10px rgba(255, 0, 127, 0.15);
-    /* Soft pink shadow on hover */
+  color: #ffffff;
+  background-color: #ff007f;
+  box-shadow: 0 4px 10px rgba(255, 0, 127, 0.15);
 }
-
-
-/* Top Desktop Right Login Button UI Grid */
 
 .login-btn {
-    padding: 10px 25px;
-    background-color: #ff007f;
-    color: #ffffff;
-    border: 2px solid #ff007f;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 10px rgba(255, 0, 127, 0.2);
-    text-decoration: none
+  padding: 10px 25px;
+  background-color: #ff007f;
+  color: #ffffff;
+  border: 2px solid #ff007f;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 10px rgba(255, 0, 127, 0.2);
+  text-decoration: none;
 }
-
-
-/* Premium Button Lift Scale Interaction */
 
 .login-btn:hover {
-    background-color: transparent;
-    color: #ff007f;
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(255, 0, 127, 0.35);
+  background-color: transparent;
+  color: #ff007f;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 0, 127, 0.35);
 }
-
-
-/* Menu Burger Toggle Trigger (Hidden on Desktop screens) */
 
 .menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: #ff007f;
-    cursor: pointer;
+  display: none;
+  font-size: 24px;
+  color: #ff007f;
+  cursor: pointer;
 }
-
-
-/* Mobile Hidden Elements Declarations Default state */
 
 .mobile-login {
-    display: none;
+  display: none;
 }
-
-
-/* Sidebar Brand Container */
 
 .sidebar-brand {
-    /* padding: 20px 25px; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    /* min-height: 85px; */
-    /* Keeps the header height stable */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-
-
-/* Stackly Image Logo Styling */
 
 .brand-logo-img {
-    width: 100%;
-    max-width: 160px;
-    /* Controls how big the logo gets */
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
-
-
-/* Optional: Chinna hover effect for the logo */
 
 .brand-logo-img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-
 
 @media (max-width: 900px) {
-    .sidebar-brand {
-        padding: 0;
-        min-height: auto;
-    }
-    /* Navbar Scale Updates for mobile screen parameters bounds */
-    .navbar {
-        padding: 15px 6%;
-    }
-    .menu-toggle {
-        display: block;
-        /* Hamburger icon visible on mobile screens */
-    }
-    .desktop-login {
-        display: none;
-    }
-    .nav-center .active{
-        padding: 8px 18px;
-    }
-    .mobile-login {
-        display: block;
-        margin-top: 15px;
-        width: 100%;
-        text-align: center;
-    }
-    .mobile-login .login-btn {
-        width: fit-content;
-        padding:8px 18px;
-        color: white;
-    }
-    /* Sliding Drawer Overlay Mobile Dropdown */
-    .nav-center {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #f5f5f7;
-        /* Keep constant solid color for phone overlays to ensure text visibility */
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
-        padding: 25px 0;
-        z-index: 999;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        transition: all 0.4s ease-in-out;
-    }
-    /* Active State Class via Javascript */
-    .nav-center.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-    /* Reshapes row links matrix into vertical blocks stacks */
-    .nav-center ul {
-        flex-direction: column;
-        gap: 22px;
-        /* width: 100%; */
-    }
-    .nav-center ul li {
-        width: fit-content;
-        text-align: center;
-    }
-    .nav-center ul li a {
-        font-size: 18px;
-        display: block;
-        padding: 8px 0;
-        width: 100%;
-    }
+  .sidebar-brand {
+    padding: 0;
+    min-height: auto;
+  }
+  .navbar {
+    padding: 15px 6%;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .desktop-login {
+    display: none;
+  }
+  .nav-center .active {
+    padding: 8px 18px;
+  }
+  .mobile-login {
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  .mobile-login .login-btn {
+    width: fit-content;
+    padding: 8px 18px;
+    color: white;
+  }
+
+  .nav-center {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f7;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px 0;
+    z-index: 999;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 0.4s ease-in-out;
+  }
+  .nav-center.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    height: 100vh;
+  }
+
+  .nav-center ul {
+    flex-direction: column;
+    gap: 22px;
+  }
+  .nav-center ul li {
+    width: fit-content;
+    text-align: center;
+  }
+  .nav-center ul li a {
+    font-size: 18px;
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+  }
 }
 
-
 .footer {
-    background-color: #0b1a15;
-    /* Unified Premium Corporate Dark Green */
-    color: #ffffff;
-    padding: 80px 8% 30px 8%;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    width: 100%;
+  background-color: #0b1a15;
+  color: #ffffff;
+  padding: 80px 8% 30px 8%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
-    /* Perfect multi-grid distribution matrix */
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto 60px auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
 }
 
 .footer-section h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 25px;
-    position: relative;
-    letter-spacing: 0.5px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 25px;
+  position: relative;
+  letter-spacing: 0.5px;
 }
-
-
-/* Micro highlight bar line accent right under titles */
 
 .footer-section h3::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background-color: #ff007f;
-    /* Neon pink accent anchor marker */
-    border-radius: 2px;
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #ff007f;
+  border-radius: 2px;
 }
 
-
-/* Brand Column Rules */
-
 .brand-col .footer-logo h2 {
-    color: #ff007f;
-    font-size: 26px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+  color: #ff007f;
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .footer-desc {
-    font-size: 14px;
-    color: #b3c5c0;
-    line-height: 1.6;
-    margin-bottom: 25px;
+  font-size: 14px;
+  color: #b3c5c0;
+  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
-
-/* Circular Footer Social Interaction Icons */
-
 .social-links {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .social-links a {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #b3c5c0;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 14px;
-    transition: all 0.3s ease;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #b3c5c0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    background-color: #ff007f;
-    color: #ffffff;
-    border-color: #ff007f;
-    transform: translateY(-3px);
+  background-color: #ff007f;
+  color: #ffffff;
+  border-color: #ff007f;
+  transform: translateY(-3px);
 }
 
-
-/* List Navigation Link Items layouts handles */
-
 .footer-section ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .footer-section ul li a {
-    text-decoration: none;
-    color: #b3c5c0;
-    font-size: 14px;
-    font-weight: 600;
-    transition: color 0.3s ease, padding-left 0.3s ease;
+  text-decoration: none;
+  color: #b3c5c0;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #ff007f;
-    padding-left: 5px;
-    /* Soft slide dynamic interactive shifts */
+  color: #ff007f;
+  padding-left: 5px;
 }
 
-
-/* Contact Details configuration */
-
 .contact-info li {
-    font-size: 14px;
-    color: #b3c5c0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: 600;
+  font-size: 14px;
+  color: #b3c5c0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
 }
 
 .contact-info li i {
-    color: #ff007f;
-    font-size: 14px;
+  color: #ff007f;
+  font-size: 14px;
 }
 
-
-/* Newsletter Input Form Section Row */
-
 .newsletter-col p {
-    font-size: 14px;
-    color: #b3c5c0;
-    line-height: 1.5;
-    margin-bottom: 20px;
+  font-size: 14px;
+  color: #b3c5c0;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .input-group-wrapper {
-    display: flex;
-    width: 100%;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .input-group-wrapper input {
-    flex-grow: 1;
-    padding: 14px 16px;
-    background-color: rgba(255, 255, 255, 0.02);
-    border: none;
-    outline: none;
-    color: #ffffff;
-    font-size: 14px;
-    width: 60%;
+  flex-grow: 1;
+  padding: 14px 16px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 14px;
+  width: 60%;
 }
 
 .input-group-wrapper input::placeholder {
-    color: #668078;
+  color: #668078;
 }
 
 .input-group-wrapper button {
-    padding: 0 22px;
-    background-color: #ff007f;
-    color: #ffffff;
-    border: none;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 0 22px;
+  background-color: #ff007f;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .input-group-wrapper button:hover {
-    background-color: #d6006b;
+  background-color: #d6006b;
 }
 
-
-/* ================= FOOTER BOTTOM & LEGAL TERMS BAR ================= */
-
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 30px;
-    width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 30px;
+  width: 100%;
 }
 
 .bottom-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .copyright-text {
-    font-size: 13px;
-    color: #668078;
-    font-weight: 600;
+  font-size: 13px;
+  color: #668078;
+  font-weight: 600;
 }
 
-
-/* Requested Terms & Conditions Row styling link layers layout handles */
-
 .legal-links {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .legal-links a {
-    text-decoration: none;
-    color: #668078;
-    font-size: 13px;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #668078;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .legal-links a:hover {
-    color: #ff007f;
+  color: #ff007f;
 }
 
 .legal-links .divider {
-    color: rgba(255, 255, 255, 0.05);
-    user-select: none;
+  color: rgba(255, 255, 255, 0.05);
+  user-select: none;
 }
 
-
-/* ================= FOOTER MOBILE RESPONSIVENESS ================= */
-
 @media (max-width: 1024px) {
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-        /* Two columns grid on medium tablet frames */
-        gap: 40px;
-    }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: start !important;
+  }
+  .footer-section {
+    text-align: start !important;
+  }
+  .footer-section ul {
+    align-items: start;
+  }
 }
 
 @media (max-width: 600px) {
-    .footer {
-        padding: 60px 6% 30px 6%;
-    }
-    /* Full single column flat list stack lines configuration on compact devices */
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-    .bottom-container {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-    .legal-links {
-        justify-content: center;
-        gap: 8px 12px;
-    }
-    .footer-section h3::after {
-        width: 100%;
-    }
+  .footer {
+    padding: 60px 6% 30px 6%;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .bottom-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .legal-links {
+    justify-content: center;
+    gap: 8px 12px;
+  }
+  .footer-section h3::after {
+    width: 100%;
+  }
 }
 
-.head-hero{
-    padding-top: 100px;
+.head-hero {
+  padding-top: 100px;
 }

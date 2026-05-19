@@ -1,4 +1,3 @@
-/* ================= 🌟 RESET LAYER STYLING 🌟 ================= */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,6 @@ body {
   width: 100vw;
 }
 
-/* ================= 🌟 GLOBAL LAYOUT CONFIGURATIONS 🌟 ================= */
 .service-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -22,10 +20,9 @@ body {
 
 .contact-main-empty-space {
   min-height: 40vh;
-  background-color: #f8fafc; /* Fine slate contrast layout template background */
+  background-color: #f8fafc;
 }
 
-/* ================= 🌟 HERO SECTOR STYLING 🌟 ================= */
 .head-hero {
   background: linear-gradient(135deg, #0b1a15 0%, #17362c 100%);
   color: white;
@@ -52,7 +49,6 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* Core Reveal Typography Transition Mechanics */
 .word-wrapper {
   display: inline-block;
   overflow: hidden;
@@ -96,9 +92,7 @@ body {
   margin: 0;
 }
 
-
 @media (max-width: 768px) {
-  
   .head-hero {
     min-height: 40vh;
     padding: 50px 20px;
@@ -106,7 +100,6 @@ body {
   .head-hero-container h1 {
     font-size: 2.5rem;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -119,7 +112,6 @@ body {
     font-size: 0.9rem;
   }
   .input-group-wrapper {
-    /* flex-direction: column; */
     gap: 10px;
   }
   .input-group-wrapper input {
@@ -141,13 +133,11 @@ body {
   }
 }
 
-/* ================= 🌟 CONTACT GRID GENERAL REDESIGN LAYOUT 🌟 ================= */
 .contact-grid-section {
   padding: 100px 5%;
   background-color: #f8fafc;
 }
 
-/* Clear section center alignments spacer overrides mapping bounds */
 .contact-grid-section .service-header {
   text-align: center;
   margin-bottom: 60px;
@@ -299,7 +289,6 @@ body {
   box-shadow: 0 0 0 4px rgba(255, 0, 127, 0.08);
 }
 
-/* 🚨 FORM VALIDATION VISUAL ERROR MECHANICS CLASSES 🚨 */
 .form-group.invalid-input input,
 .form-group.invalid-input textarea {
   border-color: #fa5252 !important;
@@ -316,10 +305,9 @@ body {
 }
 
 .form-group.invalid-input .error-indicator {
-  display: block; /* Show message on validate errors target */
+  display: block;
 }
 
-/* Buttons config styles mapping loop paths */
 .form-submit-btn {
   width: 100%;
   padding: 16px;
@@ -361,7 +349,6 @@ body {
   text-align: center;
 }
 
-/* Responsive break matrices alignment blocks code items layout components */
 @media (max-width: 991px) {
   .contact-grid-wrapper {
     flex-direction: column;
@@ -395,7 +382,6 @@ body {
   }
 }
 
-/* ================= 🌟 GLOBAL SECTION HEADER TYPOGRAPHY 🌟 ================= */
 .service-header {
   text-align: center;
   margin-bottom: 60px;
@@ -405,7 +391,7 @@ body {
 }
 
 .service-header .sub-title {
-  color: #ff007f; /* Stackly Neon Pink */
+  color: #ff007f;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -417,7 +403,7 @@ body {
 .service-header h2 {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #0b1a15; /* Deep Corporate Black-Green */
+  color: #0b1a15;
   margin-bottom: 20px;
   line-height: 1.2;
 }
@@ -429,18 +415,16 @@ body {
   margin: 0 auto;
 }
 
-/* Mobile Responsive adjustment for Header */
 @media (max-width: 768px) {
   .service-header h2 {
     font-size: 2.2rem;
   }
 }
 
-/* ================= 🌟 CORPORATE MAP SECTION STYLING 🌟 ================= */
 .corporate-map-section {
   width: 100%;
   margin-top: 50px;
-  line-height: 0; /* Removes bottom spacing for a flush fit with the footer */
+  line-height: 0;
   background-color: #f8fafc;
 }
 
@@ -448,27 +432,23 @@ body {
   width: 100%;
   height: 450px;
   overflow: hidden;
-  /* Corporate styling: Makes the map black & white to match your premium theme */
   filter: grayscale(100%) contrast(1.1) opacity(0.8);
   transition: all 0.5s ease;
 }
 
-/* Color returns to normal when the user hovers over the map */
 .map-container:hover {
   filter: grayscale(0%) contrast(1) opacity(1);
 }
 
-/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
 @media (max-width: 768px) {
   .map-container {
-    height: 350px; /* Slightly shorter on mobile */
+    height: 350px;
   }
 }
 
-/* ================= 🌟 OUR OFFICE LOCATION BLOCK STYLING 🌟 ================= */
 .office-location-section {
   padding: 120px 5%;
-  background-color: #ffffff; /* Clean White Grid background */
+  background-color: #ffffff;
   border-top: 1px solid #e2e8f0;
 }
 
@@ -478,13 +458,12 @@ body {
   align-items: center;
 }
 
-/* Left Side Address Panel layout specs */
 .location-address-block {
   flex: 1;
 }
 
 .physical-address-card {
-  background: #f8fafc; /* Subtle slate container */
+  background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
   padding: 35px;
@@ -496,7 +475,7 @@ body {
 }
 
 .office-location-section :hover.physical-address-card {
-  border-color: #ff007f; /* Glow pink line focus */
+  border-color: #ff007f;
 }
 
 .address-marker-icon {
@@ -527,7 +506,6 @@ body {
   margin: 0;
 }
 
-/* Landmark Tips Notification Panel */
 .landmark-alert-box {
   background-color: rgba(11, 26, 21, 0.02);
   border-left: 4px solid #0b1a15;
@@ -551,7 +529,6 @@ body {
   margin: 0;
 }
 
-/* Right Side Map Frame Module Configuration specs */
 .location-map-block {
   flex: 1.3;
   width: 100%;
@@ -565,21 +542,19 @@ body {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
-  line-height: 0; /* Prevents inside spacing errors */
+  line-height: 0;
 }
 
 .embedded-map-outer-frame iframe {
   border-radius: 16px;
-  /* Custom grayscale tone blueprint that matches stackly theme */
   filter: grayscale(100%) contrast(1.1) opacity(0.85);
   transition: all 0.5s ease;
 }
 
 .embedded-map-outer-frame:hover iframe {
-  filter: grayscale(0%) contrast(1) opacity(1); /* Color pops back nicely */
+  filter: grayscale(0%) contrast(1) opacity(1);
 }
 
-/* ================= 📱 SCREEN ADAPTATION ADJUSTMENTS 📱 ================= */
 @media (max-width: 991px) {
   .location-grid-wrapper {
     flex-direction: column;
@@ -618,14 +593,13 @@ body {
     padding: 8px;
   }
   .embedded-map-outer-frame iframe {
-    height: 350px; /* Adapts size constraints neatly */
+    height: 350px;
   }
 }
 
-/* ================= 🌟 CONTACT FAQ STYLING 🌟 ================= */
 .contact-faq-section {
   padding: 100px 5%;
-  background-color: #0b1a15; /* Stackly Dark Theme */
+  background-color: #0b1a15;
   color: #ffffff;
 }
 
@@ -636,7 +610,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Left Intro Block */
 .faq-intro-block {
   flex: 1;
 }
@@ -695,7 +668,6 @@ body {
   margin: 0;
 }
 
-/* Right Side Accordion Stack */
 .faq-accordion-group {
   flex: 1.3;
   display: flex;
@@ -723,7 +695,7 @@ body {
   font-weight: 700;
   color: #ffffff;
   cursor: pointer;
-  list-style: none; /* Hides default triangle */
+  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -744,7 +716,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Arrow rotation when open */
 .contact-faq-item[open] summary .toggle-icon {
   transform: rotate(180deg);
 }
@@ -763,7 +734,6 @@ body {
   margin: 0;
 }
 
-/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
 @media (max-width: 900px) {
   .contact-faq-wrapper {
     flex-direction: column;
@@ -799,10 +769,9 @@ body {
   }
 }
 
-/* ================= 🌟 FINAL CTA SECTION STYLING 🌟 ================= */
 .contact-cta-section {
   padding: 80px 5%;
-  background-color: #ffffff; /* Clean white to contrast with Dark FAQ & Dark Footer */
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -810,7 +779,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   background: #ffffff;
-  border: 1px solid rgba(255, 0, 127, 0.15); /* Soft pink border */
+  border: 1px solid rgba(255, 0, 127, 0.15);
   border-radius: 24px;
   padding: 60px 40px;
   box-shadow:
@@ -820,7 +789,6 @@ body {
   overflow: hidden;
 }
 
-/* Premium Top Pink Accent Line */
 .cta-floating-box::before {
   content: "";
   position: absolute;
@@ -849,7 +817,6 @@ body {
   line-height: 1.6;
 }
 
-/* Button Group Alignment */
 .cta-button-group {
   display: flex;
   justify-content: center;
@@ -900,7 +867,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Bottom Trust Indicators */
 .trust-indicators {
   display: flex;
   justify-content: center;
@@ -912,7 +878,7 @@ body {
 }
 
 .trust-indicators i {
-  color: #0ca678; /* Trust Green for icons */
+  color: #0ca678;
   margin-right: 5px;
 }
 
@@ -920,7 +886,6 @@ body {
   color: #cbd5e1;
 }
 
-/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
 @media (max-width: 768px) {
   .contact-cta-section {
     padding: 60px 20px;
