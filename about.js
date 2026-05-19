@@ -48,27 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ================= 4. NEWSLETTER FORM SUBMISSION =================
-    const newsletterForm = document.getElementById('newsletterForm');
-    const validationMessage = document.getElementById('validationMessage');
-
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const emailValue = document.getElementById('emailInput').value;
-
-            if (emailValue) {
-                validationMessage.style.display = 'block';
-                validationMessage.style.color = '#0ca678';
-                validationMessage.textContent = "Thank you! You've been subscribed to our insights.";
-                newsletterForm.reset();
-
-                setTimeout(() => {
-                    validationMessage.style.display = 'none';
-                }, 4000);
-            }
-        });
-    }
-
+ 
 });
 
 document.addEventListener("DOMContentLoaded", () => {

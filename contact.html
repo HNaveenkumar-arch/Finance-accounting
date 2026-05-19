@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect With Experts - Stackly Enterprise</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="comman.css">
+</head>
+<body>
+
+    <header class="navbar" data-aos="fade-down" data-aos-duration="800">
+        <a href="index.html" class="sidebar-brand">
+            <img src="./asset/logo_rose-.webp" alt="Stackly Logo" class="brand-logo-img">
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-center" id="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li class="mobile-login"><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right desktop-login">
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <section class="head-hero">
+        <div class="head-hero-container">
+            <h1>
+                <span class="word-wrapper"><span class="word-text">Connect</span></span>
+                <span class="word-wrapper"><span class="word-text">With</span></span>
+                <span class="word-wrapper"><span class="word-text">Our</span></span>
+                <span class="word-wrapper"><span class="word-text">Financial</span></span>
+                <span class="word-wrapper"><span class="word-text">Experts.</span></span>
+            </h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="material-icons">double_arrow</span>
+                <h3>Contact</h3>
+            </div>
+        </div>
+    </section>
+
+ <section class="contact-grid-section">
+    <div class="service-container">
+        
+        <div class="service-header" data-aos="fade-up" data-aos-duration="800">
+            <span class="sub-title">Corporate Headquarters</span>
+            <h2>Get In Touch</h2>
+            <p>Reach out to our strategic corporate office for consultation bookings, auditing scheduling, or corporate tier asset portfolio optimizations.</p>
+        </div>
+
+        <div class="contact-grid-wrapper">
+            <div class="contact-info-column" data-aos="fade-right" data-aos-duration="1000">
+                <div class="info-cards-stack">
+                    <div class="info-slit-card">
+                        <div class="slit-icon-frame"><i class="fas fa-phone-alt"></i></div>
+                        <div class="slit-text-details">
+                            <span>Call Institutional Advisory</span>
+                            <h4>+91 427 893 2341</h4>
+                            <p>Mon - Fri, 9:00 AM to 6:00 PM IST</p>
+                        </div>
+                    </div>
+
+                    <div class="info-slit-card">
+                        <div class="slit-icon-frame"><i class="far fa-envelope"></i></div>
+                        <div class="slit-text-details">
+                            <span>Enterprise Secure Mailing</span>
+                            <h4>support@stackly.com</h4>
+                            <p>Expect corporate review responses within 12 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="info-slit-card">
+                        <div class="slit-icon-frame"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="slit-text-details">
+                            <span>Registered Office Hub</span>
+                            <h4>Salem City, Tamil Nadu, India</h4>
+                            <p>Executive Plaza, Suite 402, Financial District</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-column" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="form-card-box">
+                    <h3>Launch Corporate Query</h3>
+                    <p>Submit your enterprise parameters below. A fiduciary leader will connect with your management group shortly.</p>
+                    
+                    <form class="interactive-contact-form" id="secureContactForm" novalidate>
+                        <div class="form-row-split">
+                            <div class="form-group">
+                                <label for="clientName">Full Name <span class="required-star">*</span></label>
+                                <input type="text" id="clientName" required>
+                                <span class="error-indicator">Please enter your full name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientEmail">Business Email <span class="required-star">*</span></label>
+                                <input type="email" id="clientEmail" required>
+                                <span class="error-indicator">Please enter a valid business email</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="querySubject">Strategic Subject <span class="required-star">*</span></label>
+                            <input type="text" id="querySubject" required>
+                            <span class="error-indicator">Please specify a corporate subject topic</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientMessage">Detailed Message / Parameters <span class="required-star">*</span></label>
+                            <textarea id="clientMessage" rows="5" required></textarea>
+                            <span class="error-indicator">Please enter detailed operational message details</span>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn">
+                            <span>Transmit Secure Inquiry</span> <i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                        <div id="formSuccessAlert" class="form-alert-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- <section class="corporate-map-section" data-aos="fade-up" data-aos-duration="1000">
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125022.42875150824!2d78.0709088686259!3d11.653761184310115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1cced810e25%3A0xc3f5c7eb1f07fcf8!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716182000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section> -->
+
+    <section class="office-location-section" id="office-location">
+    <div class="service-container location-grid-wrapper">
+        
+        <div class="location-address-block" data-aos="fade-right" data-aos-duration="1000">
+            <div class="service-header" style="text-align: left; margin-bottom: 35px;">
+                <span class="sub-title">Corporate Flagship Hub</span>
+                <h2>Our Office Location</h2>
+                <p>Visit our corporate command center for institutional wealth management, regulatory audits, and physical advisory board meetings.</p>
+            </div>
+
+            <div class="physical-address-card">
+                <div class="address-marker-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="address-text-metadata">
+                    <h3>Stackly Headquarters</h3>
+                    <p class="main-street">Executive Plaza, Suite 402, 4th Floor,</p>
+                    <p class="district-zone">Financial District Node, Fairlands,</p>
+                    <p class="city-state">Salem City, Tamil Nadu - 636016</p>
+                </div>
+            </div>
+
+            <div class="landmark-alert-box">
+                <div class="landmark-icon"><i class="fas fa-info-circle"></i></div>
+                <p><strong>Direct Orientation Note:</strong> Located adjacent to the Corporate Financial Central Axis Tower. Dedicated investor parking slots available in Basement Layer 02.</p>
+            </div>
+        </div>
+
+        <div class="location-map-block" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="embedded-map-outer-frame">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62514.39498263799!2d78.11520625!3d11.68759535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ccf52c614f%3A0x6799401869e9e802!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716110000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="480" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact-faq-section" id="contact-faq">
+    <div class="service-container contact-faq-wrapper">
+        
+        <div class="faq-intro-block" data-aos="fade-right" data-aos-duration="1000">
+            <span class="sub-title">Clear Your Doubts</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Find quick answers regarding our consultation process, operational timings, and meeting prerequisites.</p>
+            
+            <div class="quick-support-card">
+                <i class="fas fa-headset"></i>
+                <div>
+                    <h4>Still need help?</h4>
+                    <p>Call our 24/7 advisory desk directly.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-accordion-group" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            
+            <details class="contact-faq-item" open>
+                <summary>
+                    What is your typical corporate response time?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="faq-answer-box">
+                    <p>For inquiries submitted via our secure web form, our fiduciary advisory team guarantees a preliminary response within 12 to 24 business hours. Urgent audit requests are escalated automatically.</p>
+                </div>
+            </details>
+
+            <details class="contact-faq-item">
+                <summary>
+                    Do I need an appointment before visiting the office?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="faq-answer-box">
+                    <p>Yes. To ensure strict corporate confidentiality and dedicate a certified consultant to your case, we require all enterprise clients to schedule an appointment prior to visiting our physical headquarters.</p>
+                </div>
+            </details>
+
+            <details class="contact-faq-item">
+                <summary>
+                    Do you offer virtual consultations?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="faq-answer-box">
+                    <p>Absolutely. We conduct secure, end-to-end encrypted virtual advisory meetings via Microsoft Teams or Zoom for our global and out-of-state corporate clients.</p>
+                </div>
+            </details>
+
+            <details class="contact-faq-item">
+                <summary>
+                    What documents should I prepare for the first meeting?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="faq-answer-box">
+                    <p>For initial tier assessments, please have your previous fiscal year's P&L statement, current balance sheet, and a brief overview of your immediate structural concerns or scaling goals.</p>
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="contact-cta-section" id="schedule-consultation">
+    <div class="service-container">
+        
+        <div class="cta-floating-box" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="cta-content">
+                <h2>Take the First Step Towards Financial Clarity</h2>
+                <p>Book a complimentary 30-minute discovery session with our lead fiduciary advisors. No commitments, just pure strategic value for your enterprise.</p>
+                
+                <div class="cta-button-group">
+                    <a href="404page.html" class="cta-solid-btn">
+                        <i class="far fa-calendar-check"></i> Schedule Free Consultation
+                    </a>
+                    <a href="404page.html" class="cta-outline-btn">
+                        <i class="fas fa-phone-alt"></i> Call Us Directly
+                    </a>
+                </div>
+
+                <div class="trust-indicators">
+                    <span><i class="fas fa-lock"></i> 100% Confidential</span>
+                    <span class="dot-divider">•</span>
+                    <span><i class="fas fa-certificate"></i> Certified Advisors</span>
+                    <span class="dot-divider">•</span>
+                    <span><i class="fas fa-shield-alt"></i> Secure Process</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+   <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section brand-col" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                <a href="index.html" class="footer-logo">
+                    <img src="./asset/logo_rose-.webp" alt="Stackly Logo" class="brand-logo-img">
+                </a>
+                <p class="footer-desc">Empowering enterprise value and securing financial precision with bespoke accounting, strategic tax planning, and bulletproof audit compliance solutions.</p>
+                <div class="social-links">
+                    <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section" data-aos="fade-down" data-aos-delay="200">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="far fa-envelope"></i> support@stackly.com</li>
+                    <li><i class="fas fa-location-dot"></i> Salem City, Tamil Nadu</li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter-col" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                <h3>Financial Insights</h3>
+                <p>Subscribe to our corporate newsletter for quarterly tax updates and market optimization advisory.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="input-group-wrapper">
+                        <input type="email" id="emailInput" placeholder="Enter business email" required>
+                        <button type="submit" >Subscribe</button>
+                    </div>
+                    <div id="validationMessage" style="margin-top: 10px; font-size: 13px; font-weight: 600; display: none;"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
+            <div class="bottom-container">
+                <p class="copyright-text">© 2026 Stackly. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Terms &amp; Conditions</a>
+                    <span class="divider">|</span>
+                    <a href="404page.html">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="404page.html">Fiduciary Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="contact.js"></script>
+    <script>
+          // ================= 🌟 FOOTER NEWSLETTER VALIDATION PROCESS 🌟 =================
+    const newsletterForm = document.getElementById('newsletterForm');
+    const validationMessage = document.getElementById('validationMessage');
+
+    // Email Check Regex Helper
+    function isValidNewsletterEmail(email) {
+        const emailRegexPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegexPattern.test(email);
+    }
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            const emailValue = document.getElementById('emailInput').value.trim();
+
+            if (emailValue === "") {
+                // Error: Empty Input
+                validationMessage.style.display = 'block';
+                validationMessage.style.color = '#fa5252'; // Error Red
+                validationMessage.textContent = "Email address is required!";
+            } 
+            else if (!isValidNewsletterEmail(emailValue)) {
+                // Error: Invalid Email Format
+                validationMessage.style.display = 'block';
+                validationMessage.style.color = '#fa5252'; // Error Red
+                validationMessage.textContent = "Please enter a valid business email!";
+            } 
+            else {
+                // Success: Valid Email - Redirects to 404 page
+                validationMessage.style.display = 'none';
+                window.location.href = '404page.html';
+            }
+
+            // Hide the error message automatically after 4 seconds
+            if (emailValue === "" || !isValidNewsletterEmail(emailValue)) {
+                setTimeout(() => {
+                    validationMessage.style.display = 'none';
+                }, 4000);
+            }
+        });
+    }
+    </script>
+</body>
+</html>

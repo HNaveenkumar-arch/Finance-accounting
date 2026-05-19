@@ -13,6 +13,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="comman.css">
 </head>
 
 <body>
@@ -28,9 +29,9 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li class="mobile-login"><a href="login.html" class="login-btn">Login</a></li>
             </ul>
         </nav>
@@ -62,7 +63,7 @@
                 <h2>Building Trust Through Excellence</h2>
                 <p>Since 2026, Stackly has been at the forefront of financial enterprise management. We empower businesses to streamline their operations, ensure compliance, and achieve sustainable growth.</p>
                 <p>Our bespoke accounting and auditing solutions are designed to fit the precise needs of modern enterprises, blending technology with deep industry expertise.</p>
-                <a href="#contact" class="login-btn" style="display: inline-block; margin-top: 15px;">Get in Touch</a>
+                <a href="404page.html" class="login-btn" style="display: inline-block; margin-top: 15px;">Get in Touch</a>
             </div>
 
             <div class="about-stats" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
@@ -232,8 +233,8 @@
                 <h2>Ready to Elevate Your Enterprise Wealth?</h2>
                 <p>Optimize your corporate treasury, ensure absolute audit compliance, and secure strategic financial growth with our elite fiduciary advisors.</p>
                 <div class="cta-actions">
-                    <a href="login.html" class="cta-primary-btn"><i class="fas fa-calendar-check"></i> Schedule a Strategic Consultation</a>
-                    <a href="#services" class="cta-secondary-btn">Explore Audit Services</a>
+                    <a href="404page.html" class="cta-primary-btn"><i class="fas fa-calendar-check"></i> Schedule a Strategic Consultation</a>
+                    <a href="404page.html" class="cta-secondary-btn">Explore Audit Services</a>
                 </div>
             </div>
         </div>
@@ -247,20 +248,20 @@
                 </a>
                 <p class="footer-desc">Empowering enterprise value and securing financial precision with bespoke accounting, strategic tax planning, and bulletproof audit compliance solutions.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404page.html"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
 
-            <div class="footer-section" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+            <div class="footer-section" data-aos="fade-down" data-aos-delay="200">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Our Heritage</a></li>
-                    <li><a href="#service">Bespoke Services</a></li>
-                    <li><a href="#team">Our Certified Leaders</a></li>
-                    <li><a href="#testimonials">Client Reviews</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -278,7 +279,7 @@
                 <form class="newsletter-form" id="newsletterForm">
                     <div class="input-group-wrapper">
                         <input type="email" id="emailInput" placeholder="Enter business email" required>
-                        <button type="submit">Subscribe</button>
+                        <button type="submit" >Subscribe</button>
                     </div>
                     <div id="validationMessage" style="margin-top: 10px; font-size: 13px; font-weight: 600; display: none;"></div>
                 </form>
@@ -289,11 +290,11 @@
             <div class="bottom-container">
                 <p class="copyright-text">© 2026 Stackly. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="404page.html">Terms &amp; Conditions</a>
                     <span class="divider">|</span>
-                    <a href="#">Privacy Policy</a>
+                    <a href="404page.html">Privacy Policy</a>
                     <span class="divider">|</span>
-                    <a href="#">Fiduciary Disclaimer</a>
+                    <a href="404page.html">Fiduciary Disclaimer</a>
                 </div>
             </div>
         </div>
@@ -301,6 +302,49 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="about.js"></script>
+    <script>
+          // ================= 🌟 FOOTER NEWSLETTER VALIDATION PROCESS 🌟 =================
+    const newsletterForm = document.getElementById('newsletterForm');
+    const validationMessage = document.getElementById('validationMessage');
+
+    // Email Check Regex Helper
+    function isValidNewsletterEmail(email) {
+        const emailRegexPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegexPattern.test(email);
+    }
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            const emailValue = document.getElementById('emailInput').value.trim();
+
+            if (emailValue === "") {
+                // Error: Empty Input
+                validationMessage.style.display = 'block';
+                validationMessage.style.color = '#fa5252'; // Error Red
+                validationMessage.textContent = "Email address is required!";
+            } 
+            else if (!isValidNewsletterEmail(emailValue)) {
+                // Error: Invalid Email Format
+                validationMessage.style.display = 'block';
+                validationMessage.style.color = '#fa5252'; // Error Red
+                validationMessage.textContent = "Please enter a valid business email!";
+            } 
+            else {
+                // Success: Valid Email - Redirects to 404 page
+                validationMessage.style.display = 'none';
+                window.location.href = '404page.html';
+            }
+
+            // Hide the error message automatically after 4 seconds
+            if (emailValue === "" || !isValidNewsletterEmail(emailValue)) {
+                setTimeout(() => {
+                    validationMessage.style.display = 'none';
+                }, 4000);
+            }
+        });
+    }
+    </script>
 </body>
 
 </html>

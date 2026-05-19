@@ -1,0 +1,1160 @@
+/* ================= 🌟 BASE RESET & FONTS 🌟 ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+/* ================= 🌟 NAVBAR STYLING 🌟 ================= */
+
+/* ================= 🌟 HERO SECTION 🌟 ================= */
+.head-hero {
+  background: linear-gradient(135deg, #0b1a15 0%, #17362c 100%);
+  color: white;
+  width: 100%;
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.head-hero-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.head-hero-container h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+
+/* Text Animation Classes */
+.word-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 0.25em;
+  vertical-align: bottom;
+}
+.word-text {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.breadcrumb a {
+  color: #ff007f;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.breadcrumb a:hover {
+  color: #d6006b;
+  text-decoration: underline;
+}
+.breadcrumb .material-icons {
+  font-size: 16px;
+  color: #668078;
+}
+.breadcrumb h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b3c5c0;
+  margin: 0;
+}
+
+/* ================= 🌟 FOOTER SECTION 🌟 ================= */
+
+/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
+@media (max-width: 900px) {
+  .nav-center ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar Mobile */
+  .menu-toggle {
+    display: block;
+  }
+  .desktop-login {
+    display: none;
+  }
+  .nav-center {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 20px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.4s ease-in-out;
+  }
+  .nav-center.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .nav-center ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 0;
+  }
+  .nav-center li {
+    width: 100%;
+  }
+  .nav-center a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f4f6f8;
+    border-radius: 0;
+  }
+  .mobile-login {
+    display: block;
+    padding: 15px;
+    border-bottom: none;
+  }
+  .mobile-login .login-btn {
+    display: inline-block;
+    width: auto;
+  }
+
+  /* Hero & Footer Mobile */
+  .head-hero {
+    min-height: 40vh;
+    padding: 50px 20px;
+  }
+  .head-hero-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .contact-info li {
+    justify-content: center;
+  }
+  .footer-section ul a:hover {
+    padding-left: 0;
+    color: #ff007f;
+  }
+  .bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .head-hero-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  .breadcrumb a,
+  .breadcrumb h3 {
+    font-size: 0.9rem;
+  }
+  .input-group-wrapper {
+    /* flex-direction: column; */
+    gap: 10px;
+  }
+  .input-group-wrapper input {
+    border-radius: 6px;
+    padding: 14px;
+    text-align: center;
+  }
+  .input-group-wrapper button {
+    border-radius: 6px;
+    padding: 14px;
+  }
+  .legal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .divider {
+    display: none;
+  }
+}
+
+/* ================= 🌟 HOME INSIGHTS SECTION 🌟 ================= */
+.home-insights-section {
+  padding: 100px 5%;
+  background-color: #ffffff; /* Clean white background */
+}
+
+/* CSS Grid layout for automatic responsiveness */
+.insights-grid {
+  display: grid;
+  /* Auto-fit makes it automatically switch to 1 column on mobile, 2 on tablet, 3 on desktop */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* Individual Card */
+.insight-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.insight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 0, 127, 0.2);
+}
+
+/* Image Hover Zoom Effect */
+.insight-img-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.insight-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.insight-card:hover .insight-img {
+  transform: scale(1.08);
+}
+
+/* Floating Pink Badge */
+.insight-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #ff007f 0%, #d6006b 100%);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(255, 0, 127, 0.3);
+}
+
+/* Card Content Area */
+.insight-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.insight-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.85rem;
+  color: #88a39a;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.insight-meta i {
+  color: #ff007f;
+  margin-right: 4px;
+}
+
+.insight-content h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.insight-content h3 a {
+  color: #0b1a15;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.insight-card:hover .insight-content h3 a {
+  color: #ff007f; /* Title turns pink on hover */
+}
+
+.insight-content p {
+  color: #495057;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Pushes the 'Read More' link to the bottom */
+}
+
+/* Read More Link */
+.insight-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0b1a15;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.insight-read-more i {
+  color: #ff007f;
+  transition: transform 0.3s ease;
+}
+
+.insight-card:hover .insight-read-more {
+  color: #ff007f;
+}
+
+.insight-card:hover .insight-read-more i {
+  transform: translateX(5px); /* Arrow slides right */
+}
+
+/* View All Button */
+.view-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 14px 35px;
+  border-radius: 8px;
+  background: transparent;
+  color: #0b1a15;
+  border: 2px solid #e2e8f0;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  border-color: #ff007f;
+  color: #ff007f;
+  background: rgba(255, 0, 127, 0.05);
+  transform: translateY(-2px);
+}
+
+/* ================= 📱 MOBILE RESPONSIVE TWEAKS 📱 ================= */
+@media (max-width: 768px) {
+  .home-insights-section {
+    padding: 60px 20px;
+  }
+
+  .insights-grid {
+    /* Forces 1 column strictly on phones to prevent squishing */
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .insight-content h3 {
+    font-size: 1.25rem;
+  }
+}
+/* ================= 🌟 SECTION HEADER & CONTAINER STYLING 🌟 ================= */
+.service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.service-header .sub-title {
+  color: #ff007f;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.service-header h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0b1a15;
+  margin-bottom: 20px;
+}
+
+.service-header p {
+  color: #495057;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Mobile responsive tweak for header */
+@media (max-width: 768px) {
+  .service-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ================= 🌟 TAX TIPS & STRATEGIES SECTION (DARK) 🌟 ================= */
+.tax-tips-section {
+  padding: 100px 5%;
+  background-color: #0b1a15; /* Stackly Dark Theme */
+  color: #ffffff;
+}
+
+.tax-tips-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Left Intro Styling */
+.tips-intro {
+  flex: 1;
+}
+
+.tips-intro .sub-title {
+  color: #ff007f;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.tips-intro h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.tips-intro p {
+  color: #b3c5c0;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+.tips-btn {
+  display: inline-block;
+  background-color: #ff007f;
+  color: #ffffff;
+  padding: 15px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 0, 127, 0.2);
+}
+
+.tips-btn:hover {
+  background-color: #ffffff;
+  color: #ff007f;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Right Side Tips List */
+.tips-list {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow-x: hidden;
+}
+
+.tip-card {
+  background: rgba(255, 255, 255, 0.03); /* Glassmorphism effect */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(10px);
+}
+
+.tip-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: #ff007f;
+  transform: translateX(-15px); /* Card slides left on hover */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tip-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 0, 127, 0.1);
+  color: #ff007f;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover .tip-icon {
+  background: #ff007f;
+  color: #ffffff;
+  transform: rotateY(180deg); /* Icon flip effect */
+}
+
+.tip-content h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.tip-content p {
+  color: #b3c5c0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
+@media (max-width: 900px) {
+  .tax-tips-container {
+    flex-direction: column;
+  }
+  .tips-intro {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .tip-card:hover {
+    transform: translateY(-5px); /* Changes slide direction to UP on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .tax-tips-section {
+    padding: 60px 20px;
+  }
+  .tips-intro h2 {
+    font-size: 2.2rem;
+  }
+  .tip-card {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* ================= 🌟 VERTICAL TIMELINE SECTION STYLING (COLOR REDESIGN) 🌟 ================= */
+.guide-timeline-section {
+  padding: 120px 5%;
+  background-color: #dcdcdfde; /* 🌟 Soft Premium Light Slate Background for contrast */
+  position: relative;
+}
+
+.timeline-wrapper {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Side Sticky Panel Styling */
+.timeline-left-intro {
+  flex: 1;
+  position: sticky;
+  top: 140px; /* Locks right below sticky navbar */
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.timeline-left-intro .sub-title {
+  color: #ff007f; /* Stackly Pink */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.timeline-left-intro h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0b1a15; /* Deep Corporate Green-Black */
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.timeline-left-intro p {
+  color: #495057;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* Visual timeline track */
+.timeline-progress-line {
+  width: 4px;
+  height: 100px;
+  background: linear-gradient(180deg, #ff007f 0%, #cbd5e1 100%);
+  border-radius: 4px;
+}
+
+/* Right Side Overlapping Cards Stack */
+.timeline-right-stack {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Premium Timeline Card Architecture */
+.timeline-step-card {
+  background: #ffffff; /* 🌟 Pure Card White to pop out from Slate BG */
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 45px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(11, 26, 21, 0.02); /* Crisp minimal shadow */
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Left side accent indicator line inside the card */
+.timeline-step-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff007f 0%, #d6006b 100%);
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(255, 0, 127, 0.08); /* Pink corporate glow on hover */
+  border-color: rgba(255, 0, 127, 0.2);
+}
+
+.timeline-step-card:hover::before {
+  opacity: 1; /* Neon border lines glow up on hover */
+}
+
+/* Numeric Step Badge Styling */
+.step-badge {
+  position: absolute;
+  top: -15px;
+  right: 35px;
+  background: #0b1a15; /* Dark background default */
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(11, 26, 21, 0.15);
+  transition: all 0.3s ease;
+}
+
+.timeline-step-card:hover .step-badge {
+  background: #ff007f; /* Changes to branded pink on hover */
+  box-shadow: 0 4px 12px rgba(255, 0, 127, 0.3);
+}
+
+/* Icon Box Setup inside Card */
+.step-icon-box {
+  width: 65px;
+  height: 65px;
+  background-color: #f1f5f9; /* 🌟 Darker background fill for high contrast */
+  border: 1px solid #e2e8f0;
+  color: #0b1a15;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.timeline-step-card:hover .step-icon-box {
+  background-color: rgba(255, 0, 127, 0.1);
+  color: #ff007f;
+  border-color: rgba(255, 0, 127, 0.2);
+  transform: scale(1.05);
+}
+
+/* Core Copywriting Configuration */
+.step-card-content h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0b1a15;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.step-card-content p {
+  color: #495057;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Interactive Navigation Link */
+.step-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ff007f;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.step-link i {
+  transition: transform 0.3s ease;
+}
+
+.step-link:hover {
+  color: #d6006b;
+}
+
+.step-link:hover i {
+  transform: translateX(5px); /* Arrow moves smoothly */
+}
+
+/* ================= 📱 MOBILE RESPONSIVE TWEAKS 📱 ================= */
+@media (max-width: 991px) {
+  .timeline-wrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .timeline-left-intro {
+    position: relative;
+    top: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .timeline-progress-line {
+    margin: 0 auto;
+  }
+  .timeline-right-stack {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .guide-timeline-section {
+    padding: 10px;
+  }
+  .timeline-left-intro h2 {
+    font-size: 2.2rem;
+  }
+  .timeline-step-card {
+    padding: 40px 25px 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .step-badge {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= 🌟 INVESTMENT & WEALTH MANAGEMENT STYLE 🌟 ================= */
+.wealth-management-section {
+  padding: 120px 5%;
+  background-color: #ffffff; /* Clean contrast following the previous slate-grey section */
+}
+
+.wealth-container {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Left Column Styling */
+.wealth-info-block {
+  flex: 1;
+}
+
+.wealth-info-block .sub-title {
+  color: #ff007f;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.wealth-info-block h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0b1a15;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.wealth-info-block p {
+  color: #495057;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* Micro Stat Boxes Matrix */
+.wealth-stats-matrix {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 20px 25px;
+  border-radius: 12px;
+  flex: 1;
+  border-left: 4px solid #0b1a15;
+}
+
+.stat-box h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0b1a15;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  font-size: 0.85rem;
+  color: #668078;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Right Column Strategy List */
+.wealth-cards-grid {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.wealth-strategy-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.wealth-strategy-card:hover {
+  transform: translateX(12px); /* Moves right dynamically on hover */
+  box-shadow: 0 20px 40px rgba(255, 0, 127, 0.06);
+  border-color: rgba(255, 0, 127, 0.2);
+}
+
+/* Icon Frame Architecture */
+.strategy-icon-frame {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 0, 127, 0.06);
+  color: #ff007f;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.wealth-strategy-card:hover .strategy-icon-frame {
+  background: #ff007f;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.strategy-details h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0b1a15;
+  margin-bottom: 8px;
+}
+
+.strategy-details p {
+  color: #495057;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ================= 📱 MOBILE RESPONSIVE TWEAKS 📱 ================= */
+@media (max-width: 991px) {
+  .wealth-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .wealth-info-block {
+    text-align: center;
+    width: 100%;
+  }
+  .wealth-stats-matrix {
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .wealth-cards-grid {
+    width: 100%;
+  }
+  .wealth-strategy-card:hover {
+    transform: translateY(
+      -5px
+    ); /* On tablet/mobile, slides UP instead of RIGHT */
+  }
+}
+
+@media (max-width: 768px) {
+  .wealth-management-section {
+    padding: 10px;
+  }
+  .wealth-info-block h2 {
+    font-size: 2.2rem;
+  }
+  .wealth-strategy-card {
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .strategy-icon-frame {
+    margin-bottom: 5px;
+  }
+  .wealth-stats-matrix {
+    flex-direction: column;
+  }
+}
+
+/* ================= 🌟 EXPERT OPINIONS & ANALYSIS STYLE 🌟 ================= */
+.expert-analysis-section {
+  padding: 120px 5%;
+  background-color: #0b1a15; /* Branded Premium Dark Theme */
+  color: #ffffff;
+}
+
+/* Overriding global section headers for dark background consistency */
+.expert-analysis-section .service-header h2 {
+  color: #ffffff;
+}
+
+.expert-analysis-section .service-header p {
+  color: #b3c5c0;
+}
+
+/* Stacked Slits Flex-Grid Configuration */
+.analysis-slits-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Glassmorphic Horizontal Row Card Blueprint */
+.analysis-slit-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  backdrop-filter: blur(15px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+}
+
+.analysis-slit-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: #ff007f; /* Glow boundaries on hover */
+  transform: translateY(-5px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(255, 0, 127, 0.05);
+}
+
+/* Left Profile Module Alignment */
+.expert-profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 280px;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding-right: 30px;
+}
+
+.expert-avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.analysis-slit-card:hover .expert-avatar {
+  border-color: #ff007f; /* Image halo effect on item focus */
+}
+
+.expert-meta-data h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.expert-designation {
+  font-size: 0.85rem;
+  color: #ff007f;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Right Text Copy Module Layout */
+.expert-quote-content {
+  position: relative;
+  flex-grow: 1;
+}
+
+/* Structural Backdrop Quotation Icon Marker */
+.quote-icon-mark {
+  position: absolute;
+  top: -35px;
+  left: -20px;
+  font-size: 6rem;
+  color: rgba(255, 0, 127, 0.08); /* Faint pink elegant block quote */
+  font-family: "Georgia", serif;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.expert-quote-content p {
+  color: #b3c5c0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Trending Category Indicator pill */
+.trend-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.trend-tag i {
+  color: #ff007f;
+}
+
+/* ================= 📱 MOBILE RESPONSIVE TWEAKS 📱 ================= */
+@media (max-width: 900px) {
+  .analysis-slit-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 35px 30px;
+  }
+  .expert-profile-wrapper {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 0;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  .quote-icon-mark {
+    top: -25px;
+    left: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expert-analysis-section {
+    padding: 10px;
+  }
+  .expert-profile-wrapper {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    min-width: 0;
+  }
+}

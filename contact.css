@@ -1,0 +1,945 @@
+/* ================= 🌟 RESET LAYER STYLING 🌟 ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+/* ================= 🌟 GLOBAL LAYOUT CONFIGURATIONS 🌟 ================= */
+.service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.contact-main-empty-space {
+  min-height: 40vh;
+  background-color: #f8fafc; /* Fine slate contrast layout template background */
+}
+
+/* ================= 🌟 HERO SECTOR STYLING 🌟 ================= */
+.head-hero {
+  background: linear-gradient(135deg, #0b1a15 0%, #17362c 100%);
+  color: white;
+  width: 100%;
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.head-hero-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.head-hero-container h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+
+/* Core Reveal Typography Transition Mechanics */
+.word-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 0.25em;
+  vertical-align: bottom;
+}
+.word-text {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.breadcrumb a {
+  color: #ff007f;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.breadcrumb a:hover {
+  color: #d6006b;
+  text-decoration: underline;
+}
+.breadcrumb .material-icons {
+  font-size: 16px;
+  color: #668078;
+}
+.breadcrumb h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b3c5c0;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  
+  .head-hero {
+    min-height: 40vh;
+    padding: 50px 20px;
+  }
+  .head-hero-container h1 {
+    font-size: 2.5rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .head-hero-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  .breadcrumb a,
+  .breadcrumb h3 {
+    font-size: 0.9rem;
+  }
+  .input-group-wrapper {
+    /* flex-direction: column; */
+    gap: 10px;
+  }
+  .input-group-wrapper input {
+    border-radius: 6px;
+    padding: 14px;
+    text-align: center;
+  }
+  .input-group-wrapper button {
+    border-radius: 6px;
+    padding: 14px;
+  }
+  .legal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .divider {
+    display: none;
+  }
+}
+
+/* ================= 🌟 CONTACT GRID GENERAL REDESIGN LAYOUT 🌟 ================= */
+.contact-grid-section {
+  padding: 100px 5%;
+  background-color: #f8fafc;
+}
+
+/* Clear section center alignments spacer overrides mapping bounds */
+.contact-grid-section .service-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-grid-wrapper {
+  display: flex;
+  gap: 70px;
+  align-items: flex-start;
+}
+
+.contact-info-column {
+  flex: 1;
+}
+.info-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-slit-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 10px 30px rgba(11, 26, 21, 0.02);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.info-slit-card:hover {
+  transform: translateX(10px);
+  border-color: rgba(255, 0, 127, 0.2);
+  box-shadow: 0 20px 40px rgba(255, 0, 127, 0.05);
+}
+
+.slit-icon-frame {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 0, 127, 0.06);
+  color: #ff007f;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.info-slit-card:hover .slit-icon-frame {
+  background: #ff007f;
+  color: #ffffff;
+  border-radius: 50%;
+}
+.slit-text-details span {
+  font-size: 0.8rem;
+  color: #88a39a;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 4px;
+}
+.slit-text-details h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0b1a15;
+  margin-bottom: 4px;
+}
+.slit-text-details p {
+  font-size: 0.9rem;
+  color: #495057;
+  margin: 0;
+}
+
+.contact-form-column {
+  flex: 1.2;
+  width: 100%;
+}
+.form-card-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 45px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
+}
+.form-card-box h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0b1a15;
+  margin-bottom: 8px;
+}
+.form-card-box p {
+  color: #495057;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.form-row-split {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.form-row-split .form-group {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0b1a15;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.required-star {
+  color: #ff007f;
+  margin-left: 2px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 14px 18px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #0b1a15;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff007f;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 0, 127, 0.08);
+}
+
+/* 🚨 FORM VALIDATION VISUAL ERROR MECHANICS CLASSES 🚨 */
+.form-group.invalid-input input,
+.form-group.invalid-input textarea {
+  border-color: #fa5252 !important;
+  background-color: #fff5f5 !important;
+  box-shadow: 0 0 0 4px rgba(250, 82, 82, 0.1) !important;
+}
+
+.error-indicator {
+  color: #fa5252;
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: none;
+  margin-top: 2px;
+}
+
+.form-group.invalid-input .error-indicator {
+  display: block; /* Show message on validate errors target */
+}
+
+/* Buttons config styles mapping loop paths */
+.form-submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: #ff007f;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(255, 0, 127, 0.2);
+  margin-top: 15px;
+}
+.form-submit-btn:hover {
+  background: #d6006b;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255, 0, 127, 0.3);
+}
+.form-submit-btn i {
+  transition: transform 0.3s ease;
+}
+.form-submit-btn:hover i {
+  transform: translate(4px, -4px);
+}
+
+.form-alert-message {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: none;
+  text-align: center;
+}
+
+/* Responsive break matrices alignment blocks code items layout components */
+@media (max-width: 991px) {
+  .contact-grid-wrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .contact-info-column {
+    width: 100%;
+  }
+  .info-slit-card:hover {
+    transform: translateY(-4px);
+  }
+  .contact-form-column {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .contact-grid-section {
+    padding: 60px 20px;
+  }
+  .form-card-box {
+    padding: 30px 20px;
+  }
+  .form-row-split {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .info-slit-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+}
+
+/* ================= 🌟 GLOBAL SECTION HEADER TYPOGRAPHY 🌟 ================= */
+.service-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-header .sub-title {
+  color: #ff007f; /* Stackly Neon Pink */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.service-header h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0b1a15; /* Deep Corporate Black-Green */
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.service-header p {
+  color: #495057;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+
+/* Mobile Responsive adjustment for Header */
+@media (max-width: 768px) {
+  .service-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ================= 🌟 CORPORATE MAP SECTION STYLING 🌟 ================= */
+.corporate-map-section {
+  width: 100%;
+  margin-top: 50px;
+  line-height: 0; /* Removes bottom spacing for a flush fit with the footer */
+  background-color: #f8fafc;
+}
+
+.map-container {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  /* Corporate styling: Makes the map black & white to match your premium theme */
+  filter: grayscale(100%) contrast(1.1) opacity(0.8);
+  transition: all 0.5s ease;
+}
+
+/* Color returns to normal when the user hovers over the map */
+.map-container:hover {
+  filter: grayscale(0%) contrast(1) opacity(1);
+}
+
+/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
+@media (max-width: 768px) {
+  .map-container {
+    height: 350px; /* Slightly shorter on mobile */
+  }
+}
+
+/* ================= 🌟 OUR OFFICE LOCATION BLOCK STYLING 🌟 ================= */
+.office-location-section {
+  padding: 120px 5%;
+  background-color: #ffffff; /* Clean White Grid background */
+  border-top: 1px solid #e2e8f0;
+}
+
+.location-grid-wrapper {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left Side Address Panel layout specs */
+.location-address-block {
+  flex: 1;
+}
+
+.physical-address-card {
+  background: #f8fafc; /* Subtle slate container */
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 35px;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  transition: border-color 0.3s ease;
+}
+
+.office-location-section :hover.physical-address-card {
+  border-color: #ff007f; /* Glow pink line focus */
+}
+
+.address-marker-icon {
+  width: 55px;
+  height: 55px;
+  background: #ff007f;
+  color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(255, 0, 127, 0.2);
+}
+
+.address-text-metadata h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0b1a15;
+  margin-bottom: 10px;
+}
+
+.address-text-metadata p {
+  color: #495057;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Landmark Tips Notification Panel */
+.landmark-alert-box {
+  background-color: rgba(11, 26, 21, 0.02);
+  border-left: 4px solid #0b1a15;
+  border-radius: 0 12px 12px 0;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.landmark-icon i {
+  color: #0b1a15;
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.landmark-alert-box p {
+  color: #495057;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Right Side Map Frame Module Configuration specs */
+.location-map-block {
+  flex: 1.3;
+  width: 100%;
+}
+
+.embedded-map-outer-frame {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
+  line-height: 0; /* Prevents inside spacing errors */
+}
+
+.embedded-map-outer-frame iframe {
+  border-radius: 16px;
+  /* Custom grayscale tone blueprint that matches stackly theme */
+  filter: grayscale(100%) contrast(1.1) opacity(0.85);
+  transition: all 0.5s ease;
+}
+
+.embedded-map-outer-frame:hover iframe {
+  filter: grayscale(0%) contrast(1) opacity(1); /* Color pops back nicely */
+}
+
+/* ================= 📱 SCREEN ADAPTATION ADJUSTMENTS 📱 ================= */
+@media (max-width: 991px) {
+  .location-grid-wrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .location-address-block {
+    width: 100%;
+  }
+  .location-address-block .service-header {
+    text-align: center !important;
+  }
+  .physical-address-card {
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  .landmark-alert-box {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .location-map-block {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .office-location-section {
+    padding: 60px 20px;
+  }
+  .physical-address-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .embedded-map-outer-frame {
+    padding: 8px;
+  }
+  .embedded-map-outer-frame iframe {
+    height: 350px; /* Adapts size constraints neatly */
+  }
+}
+
+/* ================= 🌟 CONTACT FAQ STYLING 🌟 ================= */
+.contact-faq-section {
+  padding: 100px 5%;
+  background-color: #0b1a15; /* Stackly Dark Theme */
+  color: #ffffff;
+}
+
+.contact-faq-wrapper {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+/* Left Intro Block */
+.faq-intro-block {
+  flex: 1;
+}
+
+.faq-intro-block .sub-title {
+  color: #ff007f;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.faq-intro-block h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.faq-intro-block p {
+  color: #b3c5c0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.quick-support-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-left: 4px solid #ff007f;
+}
+
+.quick-support-card i {
+  font-size: 2rem;
+  color: #ff007f;
+}
+
+.quick-support-card h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.quick-support-card p {
+  color: #b3c5c0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Right Side Accordion Stack */
+.faq-accordion-group {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.contact-faq-item[open] {
+  border-color: #ff007f;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 25px rgba(255, 0, 127, 0.1);
+}
+
+.contact-faq-item summary {
+  padding: 22px 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  list-style: none; /* Hides default triangle */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.contact-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.contact-faq-item summary:hover {
+  color: #ff007f;
+}
+
+.toggle-icon {
+  font-size: 1rem;
+  color: #ff007f;
+  transition: transform 0.3s ease;
+}
+
+/* Arrow rotation when open */
+.contact-faq-item[open] summary .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer-box {
+  padding: 0 25px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 5px;
+  padding-top: 20px;
+}
+
+.faq-answer-box p {
+  color: #b3c5c0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
+@media (max-width: 900px) {
+  .contact-faq-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .faq-intro-block {
+    text-align: center;
+    width: 100%;
+  }
+  .quick-support-card {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .faq-accordion-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-faq-section {
+    padding: 60px 20px;
+  }
+  .faq-intro-block h2 {
+    font-size: 2.2rem;
+  }
+  .contact-faq-item summary {
+    padding: 18px 20px;
+    font-size: 1rem;
+  }
+  .faq-answer-box {
+    padding: 0 20px 20px;
+  }
+}
+
+/* ================= 🌟 FINAL CTA SECTION STYLING 🌟 ================= */
+.contact-cta-section {
+  padding: 80px 5%;
+  background-color: #ffffff; /* Clean white to contrast with Dark FAQ & Dark Footer */
+  text-align: center;
+}
+
+.cta-floating-box {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid rgba(255, 0, 127, 0.15); /* Soft pink border */
+  border-radius: 24px;
+  padding: 60px 40px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.04),
+    0 0 40px rgba(255, 0, 127, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Premium Top Pink Accent Line */
+.cta-floating-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #ff007f 0%, #d6006b 100%);
+}
+
+.cta-floating-box h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0b1a15;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.cta-floating-box p {
+  font-size: 1.1rem;
+  color: #495057;
+  margin-bottom: 35px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Button Group Alignment */
+.cta-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-solid-btn {
+  background-color: #ff007f;
+  color: #ffffff;
+  padding: 16px 35px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(255, 0, 127, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-solid-btn:hover {
+  background-color: #d6006b;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 0, 127, 0.3);
+}
+
+.cta-outline-btn {
+  background-color: transparent;
+  color: #0b1a15;
+  padding: 16px 35px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-outline-btn:hover {
+  border-color: #ff007f;
+  color: #ff007f;
+  background: rgba(255, 0, 127, 0.05);
+  transform: translateY(-3px);
+}
+
+/* Bottom Trust Indicators */
+.trust-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: #668078;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.trust-indicators i {
+  color: #0ca678; /* Trust Green for icons */
+  margin-right: 5px;
+}
+
+.dot-divider {
+  color: #cbd5e1;
+}
+
+/* ================= 📱 MOBILE RESPONSIVE 📱 ================= */
+@media (max-width: 768px) {
+  .contact-cta-section {
+    padding: 60px 20px;
+  }
+  .cta-floating-box {
+    padding: 40px 20px;
+  }
+  .cta-floating-box h2 {
+    font-size: 2rem;
+  }
+  .cta-button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .trust-indicators {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .dot-divider {
+    display: none;
+  }
+}
