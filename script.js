@@ -109,3 +109,34 @@ if (faqHeaders.length > 0) {
         });
     });
 }
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Select all image and text slides
+    const imageSlides = document.querySelectorAll('.hero-slide-image');
+    const textSlides = document.querySelectorAll('.hero-slide-text');
+    
+    // Settings
+    let currentSlide = 0;
+    const slideDuration = 3000; // 6000 milliseconds = 6 seconds per slide
+
+    // Ensure we actually have slides to animate
+    if (imageSlides.length > 0 && textSlides.length > 0) {
+        
+        // The function that performs the slide change
+        function switchSlide() {
+            // 1. Remove 'active' class from current elements
+            imageSlides[currentSlide].classList.remove('active');
+            textSlides[currentSlide].classList.remove('active');
+
+            // 2. Calculate the next slide index (loops back to 0 when reaching the end)
+            currentSlide = (currentSlide + 1) % imageSlides.length;
+
+            // 3. Add 'active' class to the new current elements
+            imageSlides[currentSlide].classList.add('active');
+            textSlides[currentSlide].classList.add('active');
+        }
+
+        // Run the switchSlide function automatically every X seconds
+        setInterval(switchSlide, slideDuration);
+    }
+});

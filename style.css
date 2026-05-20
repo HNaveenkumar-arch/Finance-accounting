@@ -9,9 +9,11 @@ body {
   background-color: #ffffff;
   overflow-x: hidden;
 }
-
+ 
+ /* ================= 🌟 HERO SECTION STYLES 🌟 ================= */
 .hero-section {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   padding: 180px 8% 80px 8%;
@@ -19,26 +21,76 @@ body {
   gap: 50px;
   position: relative;
   overflow: hidden;
-  overflow-x: hidden;
-  background-color: #dcdcdfde;
+  background-color: #dcdcdfde; /* Or whatever your theme background is */
 }
 
-.hero-image {
+/* ================= 🌀 IMAGE SLIDESHOW STYLES ================= */
+.hero-image-slideshow {
   width: 45%;
+  position: relative;
+  min-height: 450px; /* Required to hold layout space */
 }
 
-.hero-image img {
+.hero-slide-image {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
   border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  /* Smooth 1-second fade transition */
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out; 
 }
 
+.hero-slide-image.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.hero-slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= 🌀 TEXT SLIDESHOW STYLES ================= */
 .hero-content {
   width: 50%;
   position: relative;
   z-index: 10;
 }
 
+.hero-text-slideshow {
+  position: relative;
+  min-height: 250px; /* Required to hold layout space for tallest text block */
+  margin-bottom: 20px;
+}
+
+.hero-slide-text {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px); /* Adds a subtle slide-up effect */
+  /* Smooth 0.8-second fade and slide transition */
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-slide-text.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+/* ================= 🌟 STATIC TYPOGRAPHY & BUTTONS ================= */
 .eyebrow {
   display: flex;
   align-items: center;
@@ -67,7 +119,6 @@ body {
   font-size: 18px;
   color: #666666;
   line-height: 1.6;
-  margin-bottom: 35px;
 }
 
 .btn-primary {
@@ -81,6 +132,8 @@ body {
   border-radius: 5px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 5px 15px rgba(255, 0, 127, 0.3);
+  position: relative;
+  z-index: 11;
 }
 
 .btn-primary:hover {
@@ -107,23 +160,22 @@ body {
   margin-right: 5px;
 }
 
+/* ================= 📱 MOBILE RESPONSIVE ================= */
 @media (max-width: 900px) {
   .hero-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 130px 6% 60px 6% !important;
     text-align: center;
     gap: 35px;
     min-height: auto;
   }
-  .hero-image {
+  
+  .hero-image-slideshow {
     width: 100%;
     order: 1;
+    min-height: 350px;
   }
-  .hero-image img {
-    max-width: 90%;
-    margin: 0 auto;
-    display: block;
-  }
+
   .hero-content {
     width: 100%;
     order: 2;
@@ -131,6 +183,12 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  
+  .hero-text-slideshow {
+    min-height: 220px;
+    margin-bottom: 10px;
+  }
+
   .eyebrow {
     justify-content: center;
     font-size: 12px;
@@ -138,33 +196,61 @@ body {
     margin-bottom: 15px;
     width: max-content;
   }
-  .eyebrow .line {
-    display: none !important;
-  }
+  
+  .eyebrow .line { display: none !important; }
+  
   .headline {
-    font-size: 32px;
+    font-size: 36px;
     line-height: 1.2;
     margin-bottom: 18px;
   }
+  
   .subheadline {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 25px;
     max-width: 100%;
   }
+  
+  .btn-primary { width: 80%; padding: 14px 0; text-align: center; }
+  
+  .feature-ticks { justify-content: center; gap: 12px 20px; margin-top: 30px; }
+  .feature-ticks span { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .hero-image-slideshow { min-height: 250px; }
+  .headline { font-size: 28px; }
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #ff007f;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 5px 15px rgba(255, 0, 127, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #d6006b;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(255, 0, 127, 0.45);
+}
+ 
+
+@media (max-width: 900px) {
+ 
   .btn-primary {
     width: 80%;
     padding: 14px 0;
     text-align: center;
+    margin-top: 10px;
   }
-  .feature-ticks {
-    justify-content: center;
-    gap: 12px 20px;
-    margin-top: 30px;
-  }
-  .feature-ticks span {
-    font-size: 14px;
-  }
+
 }
 
 .services-section {
@@ -530,51 +616,6 @@ body {
 }
 
 @media (max-width: 900px) {
-  .menu-toggle {
-    display: block;
-  }
-  .desktop-login {
-    display: none;
-  }
-  .mobile-login {
-    display: block;
-    margin-top: 15px;
-  }
-  .nav-center {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #f5f5f7;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
-    padding: 20px 0;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: all 0.4s ease;
-    z-index: 1000;
-  }
-  .nav-center.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  .nav-center ul {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-  }
-  .hero-section {
-    flex-direction: column;
-    padding: 60px 6%;
-    text-align: center;
-    gap: 40px;
-  }
-  .hero-image {
-    width: 100%;
-    order: 1;
-  }
-  .hero-content {
-    width: 100%;
-    order: 2;
-  }
   .eyebrow {
     justify-content: center;
   }
