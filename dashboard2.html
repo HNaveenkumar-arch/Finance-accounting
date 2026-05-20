@@ -640,7 +640,7 @@
     <div class="sidebar-overlay" id="menuOverlay"></div>
 
     <aside class="sidebar" id="appSidebar">
-        <a href="index.html" class="sidebar-brand">
+        <a href="dashboard2.html" class="sidebar-brand">
             <img src="./asset/logo_rose-.webp" alt="Stackly Logo">
         </a>
 
@@ -649,7 +649,7 @@
             <div class="section-title"><i class="fas fa-book" style="color: #8b5cf6; margin-right: 6px;"></i> Ledger
                 Logs</div>
             <ul class="sidebar-menu">
-                <li class="menu-item active" data-target="page-overview"><a><i class="fas fa-th-large"></i> Dashboard
+                <li class="menu-item active" data-target="page-overview"><a><i class="fas fa-th-large"></i>Accountant Dashboard
                         Overview</a></li>
                 <li class="menu-item" data-target="page-transactions"><a><i class="fas fa-exchange-alt"></i>
                         Transactions</a></li>
@@ -671,7 +671,7 @@
         <header class="dashboard-header">
             <div class="header-left">
                 <div class="hamburger-menu" id="barToggleBtn"><i class="fas fa-bars"></i></div>
-                <h1 id="currentPageHeaderTitle">Dashboard Overview</h1>
+                <h1 id="currentPageHeaderTitle">Accountant Dashboard Overview</h1>
             </div>
             <div class="header-profile-box">
                 <div class="prof-details">
@@ -733,13 +733,23 @@
                 </div>
                 <div class="table-container">
                     <div class="table-title"><i class="fas fa-plus-circle"></i> 1. Insert New Transaction Entry</div>
-                    <form class="settings-grid-layout" style="margin-top:10px;"
-                        onsubmit="event.preventDefault(); alert('Transaction processed successfully!');">
-                        <div class="form-block"><label>Account Class Code Selector</label><input type="text"
-                                placeholder="e.g., ACC-DEBIT-99" required></div>
-                        <div class="form-block"><label>Transaction Capital Volume ($)</label><input type="number"
-                                placeholder="Enter transaction amount" required></div>
-                        <button type="submit" class="save-settings-btn">Post to General Ledger</button>
+                    <form class="settings-grid-layout" style="margin-top:10px;">
+                        <div class="form-block">
+                            <label>Account Class Code Selector</label>
+                            <input type="text" id="ledgerCode" placeholder="e.g., ACC-DEBIT-99" required>
+                        </div>
+                        <div class="form-block">
+                            <label>Transaction Capital Volume ($)</label>
+                            <input type="number" id="ledgerAmount" placeholder="Enter transaction amount" required>
+                        </div>
+
+                        <div id="ledgerError"
+                            style="color: #fa5252; font-size: 13px; font-weight: 600; margin-bottom: 15px; display: none;">
+                            Please fill all the boxes before posting!
+                        </div>
+
+                        <button type="button" id="postLedgerBtn" class="save-settings-btn">Post to General
+                            Ledger</button>
                     </form>
                 </div>
                 <div class="table-container">
@@ -774,13 +784,23 @@
                 <div class="table-container">
                     <div class="table-title"><i class="fas fa-file-signature"></i> 1. Draft Professional Customer
                         Invoice</div>
-                    <form class="settings-grid-layout" style="margin-top:10px;"
-                        onsubmit="event.preventDefault(); alert('Billing Invoice dispatched!');">
-                        <div class="form-block"><label>Client Enterprise Corporate Name</label><input type="text"
-                                placeholder="e.g., TechCorp Solutions" required></div>
-                        <div class="form-block"><label>Total Outstanding Billing Amount ($)</label><input type="number"
-                                placeholder="0.00" required></div>
-                        <button type="submit" class="save-settings-btn">Generate & Dispatch Bill</button>
+                    <form class="settings-grid-layout" style="margin-top:10px;">
+                        <div class="form-block">
+                            <label>Client Enterprise Corporate Name</label>
+                            <input type="text" id="billClientName" placeholder="e.g., TechCorp Solutions" required>
+                        </div>
+                        <div class="form-block">
+                            <label>Total Outstanding Billing Amount ($)</label>
+                            <input type="number" id="billAmount" placeholder="0.00" required>
+                        </div>
+
+                        <div id="billError"
+                            style="color: #fa5252; font-size: 13px; font-weight: 600; margin-bottom: 15px; display: none;">
+                            Please fill all the client billing details before dispatching!
+                        </div>
+
+                        <button type="button" id="dispatchBillBtn" class="save-settings-btn">Generate & Dispatch
+                            Bill</button>
                     </form>
                 </div>
                 <div class="table-container">
@@ -821,7 +841,8 @@
                                     value="Senior Accounting Ledger Associate" required></div>
                             <div class="form-block"><label>Operational Enterprise Email Routing</label><input
                                     type="email" value="accountant@fintrust.com" required></div>
-                            <button type="submit" class="save-settings-btn">Update Profile Metadata</button>
+                            <button type="button" onclick="window.location.href='404page.html'"
+                                class="save-settings-btn">Update Profile Metadata</button>
                         </form>
                     </div>
                     <div class="settings-card">
@@ -830,7 +851,8 @@
                             <div class="form-block"><label>Fiscal Calendar Accounting Formatting</label><select>
                                     <option>Standard Dual-Entry Closing System</option>
                                 </select></div>
-                            <button type="submit" class="save-settings-btn">Lock General Preferences</button>
+                            <button type="button" onclick="window.location.href='404page.html'"
+                                class="save-settings-btn">Lock General Preferences</button>
                         </form>
                     </div>
                 </div>
@@ -910,7 +932,6 @@
                     label: 'Audited & Posted Ledgers Volume',
                     data: [140, 290, 185, 320, 90, 410, 480],
                     borderColor: '#8b5cf6',
-                    /* Neon Amethyst Line */
                     backgroundColor: 'rgba(139, 92, 246, 0.06)',
                     borderWidth: 3,
                     tension: 0.3,
@@ -940,6 +961,36 @@
                 }
             }
         });
+        const postBtn = document.getElementById('postLedgerBtn');
+        if (postBtn) {
+            postBtn.addEventListener('click', function () {
+                const codeBox = document.getElementById('ledgerCode').value.trim();
+                const amountBox = document.getElementById('ledgerAmount').value.trim();
+                const errorMsg = document.getElementById('ledgerError');
+
+                if (codeBox === "" || amountBox === "") {
+                    errorMsg.style.display = 'block';
+                } else {
+                    errorMsg.style.display = 'none';
+                    window.location.href = '404page.html';
+                }
+            });
+        }
+        const dispatchBtn = document.getElementById('dispatchBillBtn');
+        if (dispatchBtn) {
+            dispatchBtn.addEventListener('click', function () {
+                const clientNameBox = document.getElementById('billClientName').value.trim();
+                const amountBox = document.getElementById('billAmount').value.trim();
+                const errorMsg = document.getElementById('billError');
+
+                if (clientNameBox === "" || amountBox === "") {
+                    errorMsg.style.display = 'block';
+                } else {
+                    errorMsg.style.display = 'none';
+                    window.location.href = '404page.html';
+                }
+            });
+        }
     </script>
 </body>
 
